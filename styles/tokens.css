@@ -1,0 +1,68 @@
+/* ============================================================
+   TOKENS — Design system variables
+   ============================================================ */
+
+@font-face {
+  font-family: 'Jersey10';
+  src: url('../assets/fonts/Jersey10-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VT323';
+  src: url('../assets/fonts/VT323-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  /* ── Palette ─────────────────────────────────────────────── */
+  --bg:              #1e232e;
+  --bg-dark:         #161a23;
+  --bg-darker:       #0f1117;
+  --card:            #825e40;
+  --card-dark:       #523625;
+  --card-darker:     #3b2318;
+  --border:          #3e2723;
+  --border-light:    #5d4037;
+  --parchment:       #f0e6d2;
+  --parchment-dim:   #e0d2b4;
+
+  --text:            #fff1e6;
+  --muted:           #cfc0b4;
+  --muted-dark:      #a89b8c;
+  --accent:          #4ade80;
+  --accent-dim:      #2d7a4f;
+  --accent-bg:       rgba(74, 222, 128, 0.12);
+  --destructive:     #ef4444;
+
+  /* ── Typography ──────────────────────────────────────────── */
+  --font-jersey:     'Jersey10', 'Courier New', monospace;
+  --font-vt323:      'VT323', 'Courier New', monospace;
+  --font-inter:      'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --gap-xs:   4px;
+  --gap-sm:   8px;
+  --gap-md:   16px;
+  --gap-lg:   32px;
+  --gap-xl:   64px;
+  --gap-2xl:  96px;
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --max-width:   1100px;
+  --section-pad: 80px 24px;
+
+  /* ── Effects ─────────────────────────────────────────────── */
+  --shadow-btn:   3px 3px 0 var(--border);
+  --shadow-card:  4px 4px 0 var(--border);
+  --shadow-inset: inset 2px 2px 0 rgba(0,0,0,0.3);
+}

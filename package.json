@@ -1,0 +1,13 @@
+{
+  "name": "productivitism-landing",
+  "version": "1.0.0",
+  "description": "What was created Landing page — landing/ File\tWhat it does index.html\tFull landing page — Hero with layered room + scanline, Features (3 cards), Screenshots (4 placeholders), All 12 Classes with stat bars, Download CTA, Footer privacy.html\tFull Privacy Policy — covers Supabase, Apple/Google Sign-In, email, voice memos, data retention, user rights, GDPR-compatible terms.html\tFull Terms & Conditions — 14 sections including IAP placeholder, EULA link to Apple's standard styles/tokens.css\tAll fonts (@font-face) + CSS custom properties styles/reset.css\tBox model reset styles/layout.css\tNav, hero, sections, footer, legal page, responsive breakpoints styles/components.css\tButtons, store badges, XP badges, feature cards, class cards, stat bars, screenshot frames, scroll-reveal styles/animations.css\tFloat, scanline flicker, slide-in, stat bar fill, blink cursor scripts/main.js\tIntersectionObserver scroll reveal + stat bar trigger + nav scroll effect vercel.json\tSingle-line Vercel deploy config IMAGES_NEEDED.md\tFull list of every placeholder image, exact specs, and where each is referenced Assets already copied from client: fonts (Jersey10, VT323, Inter Variable), focus room PNGs (6 layers), character sprite layers, icon + favicon.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

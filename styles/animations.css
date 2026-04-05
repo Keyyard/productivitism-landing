@@ -1,0 +1,81 @@
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+/* ── Float (hero sprite) ───────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+.float {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* ── Blink cursor ──────────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ── Scanline flicker (subtle) ─────────────────────────────── */
+@keyframes scanflicker {
+  0%   { opacity: 0.06; }
+  50%  { opacity: 0.09; }
+  100% { opacity: 0.06; }
+}
+
+.scanline {
+  animation: scanflicker 4s ease-in-out infinite;
+}
+
+/* ── Pulse accent ──────────────────────────────────────────── */
+@keyframes pulse-accent {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+}
+
+.pulse-accent {
+  animation: pulse-accent 2.5s ease-in-out infinite;
+}
+
+/* ── Slide in from left ────────────────────────────────────── */
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.hero-content {
+  animation: slide-in-left 0.7s ease 0.2s both;
+}
+
+/* ── Fade in up (hero sprite) ──────────────────────────────── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-sprite {
+  animation: fade-in-up 0.7s ease 0.5s both;
+}
+
+/* ── Pixel glitch (hover on title) ────────────────────────── */
+@keyframes glitch {
+  0%   { clip-path: inset(40% 0 61% 0); transform: translateX(-2px); }
+  20%  { clip-path: inset(92% 0 1% 0);  transform: translateX(2px); }
+  40%  { clip-path: inset(43% 0 1% 0);  transform: translateX(0); }
+  60%  { clip-path: inset(25% 0 58% 0); transform: translateX(-1px); }
+  80%  { clip-path: inset(54% 0 7% 0);  transform: translateX(1px); }
+  100% { clip-path: inset(58% 0 43% 0); transform: translateX(0); }
+}
+
+/* ── Pixel cursor blink on section label ───────────────────── */
+.section-label::after {
+  content: '_';
+  animation: blink 1s step-end infinite;
+  color: var(--accent);
+}
