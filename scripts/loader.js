@@ -8,10 +8,10 @@
 
   const SECTIONS = ['nav', 'hero', 'guide', 'classes', 'screenshots', 'download', 'footer'];
 
-  /* Load all sections in document order (sequential to preserve DOM order) */
-  for (const name of SECTIONS) {
+  /* Load all sections in parallel, inject in document order */
+  await Promise.all(SECTIONS.map(async (name) => {
     const placeholder = document.querySelector(`[data-section="${name}"]`);
-    if (!placeholder) continue;
+    if (!placeholder) return;
     try {
       const res = await fetch(`sections/${name}.html`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -20,10 +20,10 @@
       console.error(`[loader] Failed to load section "${name}":`, err.message);
       placeholder.innerHTML = `<div style="padding:40px;text-align:center;color:#a89b8c;font-family:monospace">
         [section: ${name}] — open with a server to preview<br>
-        <small>npx serve landing/ &nbsp;|&nbsp; python3 -m http.server 8000</small>
+        <small>npx serve . &nbsp;|&nbsp; python3 -m http.server 8000</small>
       </div>`;
     }
-  }
+  }));
 
   /* After all sections are injected, init main app logic */
   window.dispatchEvent(new CustomEvent('content-loaded'));

@@ -1,0 +1,125 @@
+# Productivitism
+
+> A gamified productivity app for jack-of-all-trades who struggle with decision paralysis and identity crisis. Create pixel art characters for each life role, turn habits into quests, and level up multiple identities in parallel. iOS and Android. Free during Early Access.
+
+**Status:** Early Access — Free
+**Platforms:** iOS, Android
+**Website:** https://productivitism.com
+**Contact:** contact@keyyard.xyz
+**Creator:** keyyard (https://github.com/keyyard)
+
+---
+
+## What is Productivitism?
+
+Productivitism is a gamified productivity and habit-tracking app designed specifically for multitalented individuals—people juggling multiple roles, identities, or skill trees at the same time.
+
+**The Problem:** You want to code, run a business, work out, read, create, and learn—all at once. Not because you're lazy, but because you're genuinely interested in multiple things. Standard to-do lists don't help because they force you to pick one thing and stick with it. You end up context-switching, feeling scattered, and accomplishing nothing.
+
+**The Solution:** Productivitism separates your life into distinct characters—one for each role you play (The Developer, The Athlete, The Creator, The Student). By leveling each character independently, you cure decision paralysis, reduce context-switching, and finally make progress across all your identities.
+
+---
+
+## Core Features
+
+### Character Creation & Role Separation (Identity Management)
+- Create pixel art avatars for each major life role (recommended 3-5 characters)
+- Customize appearance (skin tone, hair, outfit, shoes) to match each role's vibe
+- Each character has an independent stat sheet and activity history
+- "Switch into character mode"—focus on one identity per session to reduce decision paralysis
+- 12 class archetypes tied to real-life roles (Warrior, Scholar, Artisan, Athlete, Creator, Healer, etc.)
+
+### Daily Rituals (Habit Tracker)
+- Assign habits to the character role they belong to
+- Three habit types: Check (binary), Count (reps/numbers), Measure (continuous amounts)
+- Streak tracking prevents all-or-nothing thinking
+- Daily, weekly, or custom frequency targets
+- Full activity history per habit per character
+- XP reward scales with streak length
+
+### Quest Board (Task Manager)
+- Create quests for each character—assign goals and projects to the role they belong to
+- Difficulty ratings (1–10) scale XP rewards proportionally
+- Subtask breakdowns for complex goals
+- Voice memo notes on any task
+- Due date tracking with overdue warnings
+- Link each quest to the character it belongs to (separates your identities)
+
+### The Sanctuary (Focus Timer)
+- Cozy pixel art study room with ambient soundscapes (Rain, Fireplace, Interior, etc.)
+- Two focus modes: Countdown (timed Pomodoro-style) and Endurance (open-ended deep work)
+- Your active character sits in the room and earns XP alongside you
+- ADHD-friendly: no punishment when the timer ends, just gentle progress tracking
+- Focus time tracked per character
+- Live Activity on iOS lock screen
+- Customizable ambient sounds to minimize distraction
+
+### Analytics & Stat Distribution
+- View your "party stats"—see which character is getting the most hours
+- Habit grid visualization for daily routine patterns
+- Focus minute tracking per character
+- Understand where your time and energy actually go
+- Identify imbalanced roles (e.g., "The Athlete" is neglected this month)
+
+### Cosmetic Unlocks (Motivation)
+- Unlock new outfits, hairstyles, and accessories through real-world activity
+- Every habit check, quest completion, and focus session earns XP
+- Cosmetics are character-specific—The Developer gets different unlocks than The Athlete
+- Playing the game is the reward; cosmetics are the visible proof
+
+---
+
+## Positioning
+
+**For jack-of-all-trades:** Cure your identity crisis. Stop pretending you're one person with one goal. Finally organize your multiple selves.
+
+**For multitalented creatives:** Separate your skill trees. The Artist doesn't need to think about The Entrepreneur's goals. Each character has their own quest board.
+
+**For ADHD brains:** No shame, no burnout mechanics. Pick one character per day, focus on their habits, and move on. The app celebrates progress, not perfection.
+
+**For ambitious people:** Level multiple characters in parallel. It's not "either/or"—it's "all of the above, responsibly." The character system prevents burnout by rotating focus.
+
+---
+
+## Why Productivitism Works
+
+1. **Reduces Decision Paralysis** — With 5+ competing interests, choosing what to do becomes paralyzing. Characters force a framework: "Today, I'm in Developer mode."
+
+2. **Separates Skill Trees** — Your goals as an athlete aren't the same as your goals as a musician. Each character owns their own XP, quests, and streaks.
+
+3. **Prevents Context-Switching Fatigue** — By assigning habits/quests to characters, you see clearly when you're mixing roles. The app gently nudges: "You're trying to do 3 characters at once."
+
+4. **Gamification That Doesn't Feel Shallow** — The pixel art RPG aesthetic isn't cosmetic—it reflects the real problem: you ARE multiple characters. Leveling them up feels meaningful because it maps to real-life progress.
+
+5. **ADHD-Friendly Design** — No shame mechanics. No guilt. Just: did you play today, or did you not? If yes, your character levels up. If not, there's still tomorrow.
+
+---
+
+## Keywords
+
+App Store: gamify, rpg, pixel, cozy, ADHD, focus, timer, quest, routine, level, sandbox, avatar, pomodoro, maxxing, stat, habit-tracker, productivity-app
+
+Web SEO: gamified productivity app, habit tracker, focus timer, character creation, role management, RPG productivity, ADHD-friendly, decision paralysis, multitalented, pixel art, cozy games
+
+---
+
+## Pages & Links
+
+- **Homepage:** https://productivitism.com/ — Full product overview, features, screenshots
+- **Privacy Policy:** https://productivitism.com/privacy.html — Data handling, deletion, GDPR compliance
+- **Terms & Conditions:** https://productivitism.com/terms.html — Usage terms, liability, IP rights
+
+---
+
+## Social & Developer
+
+- **Instagram:** https://instagram.com/productivitism.app
+- **GitHub:** https://github.com/keyyard — Creator's open-source work
+- **Email:** contact@keyyard.xyz
+
+---
+
+## Subtitle
+
+"Life-maxxing for multitalented individuals" — turning multiple roles, identities, and ambitions into an organized RPG where you're the main character (or characters).
+

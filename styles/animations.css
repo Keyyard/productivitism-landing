@@ -79,3 +79,17 @@
   animation: blink 1s step-end infinite;
   color: var(--accent);
 }
+
+/* ── Reduced motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .float,
+  .scanline,
+  .pulse-accent,
+  .hero-content,
+  .hero-sprite,
+  .section-label::after {
+    animation: none;
+  }
+  .hero-content { opacity: 1; transform: none; }
+  .hero-sprite  { opacity: 1; transform: none; }
+}

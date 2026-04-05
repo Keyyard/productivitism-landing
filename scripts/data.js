@@ -5,10 +5,10 @@
 const DATA = {
   hero: {
     eyebrow: "▶ EARLY ACCESS — FREE",
-    title: "PRODUCTIVISM",
-    subtitle: "Life-maxxing for multitalented individuals..",
-    body: "Track habits. Complete quests. Enter deep focus. Level up your character while leveling up your life — one day at a time.",
-    ctaLead: "Learn More →",
+    title: "PRODUCTIVITISM",
+    subtitle: "Life-maxxing for multitalented individuals.",
+    body: "You're a jack-of-all-trades juggling multiple identities. Create pixel-art characters for each role, turn habits into quests, and escape decision paralysis by focusing on one character at a time. Level up your real life.",
+    ctaLead: "Begin Your Quest →",
     appStoreUrl: "#download",
     googlePlayUrl: "#download",
     sprite: {
@@ -21,20 +21,20 @@ const DATA = {
     }
   },
   features: {
-    label: "What you get",
-    title: "YOUR TOOLS FOR GROWTH",
-    subtitle: "Three interconnected systems — habits feed your character, tasks reward your progress, and focus sessions keep you in the zone.",
+    label: "Your real-life party",
+    title: "BUILD MULTIPLE IDENTITIES",
+    subtitle: "Stop mixing up your roles. Each character represents a different part of who you are — The Developer, The Athlete, The Creator, The Student. Level them up independently.",
     items: [
       {
         id: "feat-rituals",
         badge: "+XP",
         title: "DAILY RITUALS",
-        description: "Build streaks, earn XP, and watch your stats grow. Habits are linked to characters — every check-in makes them stronger.",
+        description: "Build streaks on habits tied to each character. Every check-in earns XP and moves your character closer to the next level.",
         details: [
-          "Streak tracking with full history log",
-          "Types: check-in, count, measure",
-          "Assign habits to specific characters",
-          "Daily, weekly, or custom frequency",
+          "Three habit types: Check (binary), Count (reps), Measure (tracked amounts)",
+          "Assign habits to specific characters — separate your skill trees",
+          "Streak tracking prevents decision paralysis: pick one character per day",
+          "Daily, weekly, or custom frequency targets",
           "XP reward scales with streak length"
         ]
       },
@@ -42,24 +42,24 @@ const DATA = {
         id: "feat-quests",
         badge: "+XP",
         title: "QUEST BOARD",
-        description: "Tasks as quests — with difficulty ratings, due dates, subtasks, and voice memos. The harder the quest, the more XP you earn.",
+        description: "Frame your goals as quests. Assign tasks to characters, set difficulty ratings (1–10), and earn XP for completion.",
         details: [
           "Difficulty slider (1–10) scales XP reward",
-          "Voice memo notes on any task",
-          "Subtask breakdowns",
+          "Subtask breakdowns for complex projects",
+          "Voice memo notes on any quest",
           "Due date chips and overdue warnings",
-          "Link tasks to your characters"
+          "Link tasks to the character role they belong to"
         ]
       },
       {
         id: "feat-focus",
         badge: "+XP",
-        title: "THE SANCTUARY",
-        description: "A deep focus room with layered pixel art ambience. Choose Endurance or Countdown mode — your character sits with you and earns XP.",
+        title: "COZY FOCUS ROOM",
+        description: "Enter deep focus without burnout. Sit your character in a pixel-art sanctuary with ambient soundscapes. ADHD-friendly and streak-proof.",
         details: [
-          "Layered pixel art study room",
-          "Endurance & Countdown focus modes",
-          "Ambient soundscapes",
+          "Two modes: Countdown (Pomodoro-style) and Endurance (open-ended)",
+          "Layered pixel art study room with customizable ambience",
+          "Your character earns XP alongside you",
           "Focus minutes tracked per character",
           "Live Activity on iOS lock screen"
         ]
@@ -68,21 +68,21 @@ const DATA = {
         id: "feat-chars",
         badge: "+XP",
         title: "CHARACTER SYSTEM",
-        description: "Create pixel art characters, pick a class, and watch them grow as your real-life stats improve. Each character has a full history log.",
+        description: "Create pixel art avatars for each life role. Customize them, unlock cosmetics, and watch your real-life stat distribution.",
         details: [
-          "12 classes tied to real-life archetypes",
-          "Layered sprite customization (skin, hair, outfit)",
-          "Unlockable cosmetics via habits, tasks & focus",
-          "Full activity history per character",
-          "XP, levels, and focus time tracking"
+          "12 classes tied to real-life archetypes (Developer, Athlete, Scholar, etc.)",
+          "Layered sprite customization: skin, hair, outfit, accessories",
+          "Unlock cosmetics via habits, tasks, and focus sessions",
+          "Full lore page per character with activity history",
+          "See your stat distribution across all roles"
         ]
       }
     ]
   },
   gallery: {
     label: "See it in action",
-    title: "EXPERIENCE PRODUCTIVISM",
-    subtitle: "Screenshots from the app — character creation, quest tracking, daily habits, and deep focus sessions.",
+    title: "TURN MULTIPLE ROLES INTO A PARTY",
+    subtitle: "Create characters for each identity. Assign habits and quests. Watch your stat distribution across all roles.",
     screenshots: [
       {
         src: "assets/screenshots/screenshot-1.jpeg",
@@ -107,8 +107,8 @@ const DATA = {
     title: "BEGIN YOUR QUEST",
     subtitle: "Free during Early Access. No credit card required.",
     tagline: "Free during Early Access",
-    appStoreUrl: "#",
-    googlePlayUrl: "#",
+    appStoreUrl: "#download",
+    googlePlayUrl: "#download",
     appStoreText: "COMING SOON",
     googlePlayText: "COMING SOON"
   },
