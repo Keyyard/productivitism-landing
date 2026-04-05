@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "productivitism-landing",
+  "compatibility_date": "2026-04-05",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      "node_modules",
+      ".git",
+      "package.json",
+      "package-lock.json",
+      "bun.lockb",
+      "readme.md",
+      "IMAGES_NEEDED.md"
+    ]
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
