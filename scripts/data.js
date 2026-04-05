@@ -76,6 +76,32 @@ const DATA = {
           "Full lore page per character with activity history",
           "See your stat distribution across all roles"
         ]
+      },
+      {
+        id: "feat-voice",
+        badge: "LOG",
+        title: "VOICE MEMOS",
+        description: "Record thoughts directly on tasks or as standalone notes. Perfect for brain-dumping, progress logs, or idea capture.",
+        details: [
+          "One-tap record from the home tab",
+          "Attach memos to any task or quest",
+          "Rename and organize recordings",
+          "Stored locally on your device",
+          "Link to characters for context"
+        ]
+      },
+      {
+        id: "feat-sync",
+        badge: "SYNC",
+        title: "SYNC & OFFLINE",
+        description: "Works fully offline. Sign in to sync your data across devices seamlessly — pick up right where you left off.",
+        details: [
+          "Full offline-first functionality",
+          "Optional cloud sync via account",
+          "Apple & Google Sign-In supported",
+          "Guest mode with no account required",
+          "Auto-sync in background"
+        ]
       }
     ]
   },

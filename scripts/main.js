@@ -78,51 +78,103 @@
     });
   });
 
-  /* ── Screenshot tabs ───────────────────────────────────────── */
-  const tabs   = document.querySelectorAll('.ss-tab');
-  const panels = document.querySelectorAll('.ss-panel');
+  /* ── Screenshot gallery groups + thumbnail interaction ─────── */
+  // Delegated thumb click — registered once, works after content loads
+  document.addEventListener('click', (e) => {
+    const thumb = e.target.closest('.ss-thumb');
+    if (!thumb) return;
+    const panel = thumb.closest('.ss-group-panel');
+    if (!panel) return;
 
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const targetId = 'tab-' + tab.dataset.tab;
+    const featuredImg     = panel.querySelector('.ss-featured-img img');
+    const featuredCaption = panel.querySelector('.ss-featured-caption');
 
-      tabs.forEach((t)   => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-      panels.forEach((p) => p.classList.remove('active'));
+    featuredImg.classList.add('fading');
+    setTimeout(() => {
+      featuredImg.src = thumb.dataset.src;
+      featuredCaption.textContent = thumb.dataset.caption;
+      featuredImg.classList.remove('fading');
+    }, 180);
 
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-      const panel = document.getElementById(targetId);
-      if (panel) panel.classList.add('active');
-    });
+    panel.querySelectorAll('.ss-thumb').forEach((t) => t.classList.remove('active'));
+    thumb.classList.add('active');
   });
 
-  /* ── Carousel arrow injection ──────────────────────────────── */
+  // Group tab switching — re-init after content loads (buttons are dynamic)
+  function initGalleryTabs() {
+    document.querySelectorAll('.ss-group-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const group = btn.dataset.group;
+        document.querySelectorAll('.ss-group-btn').forEach((b) => {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-selected', String(b === btn));
+        });
+        document.querySelectorAll('.ss-group-panel').forEach((p) => {
+          p.classList.toggle('active', p.id === 'ss-group-' + group);
+        });
+      });
+    });
+  }
+
+  initGalleryTabs();
+  window.addEventListener('content-synced', initGalleryTabs);
+
+  /* ── Carousel arrow injection + dots ──────────────────────── */
   document.querySelectorAll('.ss-carousel').forEach((carousel) => {
     const track = carousel.querySelector('.ss-track');
     if (!track) return;
 
     const prev = document.createElement('button');
     prev.className = 'ss-arrow ss-arrow--prev';
-    prev.setAttribute('aria-label', 'Scroll left');
+    prev.setAttribute('aria-label', 'Previous slide');
     prev.textContent = '‹';
 
     const next = document.createElement('button');
     next.className = 'ss-arrow ss-arrow--next';
-    next.setAttribute('aria-label', 'Scroll right');
+    next.setAttribute('aria-label', 'Next slide');
     next.textContent = '›';
 
     carousel.appendChild(prev);
     carousel.appendChild(next);
 
-    const SCROLL_AMT = 240;
+    // Dot indicators
+    const items = track.querySelectorAll('.guide-carousel-item');
+    const dotsContainer = document.createElement('div');
+    dotsContainer.className = 'ss-dots';
+    dotsContainer.setAttribute('aria-hidden', 'true');
 
-    prev.addEventListener('click', () => track.scrollBy({ left: -SCROLL_AMT, behavior: 'smooth' }));
-    next.addEventListener('click', () => track.scrollBy({ left:  SCROLL_AMT, behavior: 'smooth' }));
+    const dots = Array.from(items).map((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'ss-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      dot.addEventListener('click', () => {
+        const gap = parseInt(getComputedStyle(track).gap) || 16;
+        const itemW = (items[i] ? items[i].offsetWidth : 260) + gap;
+        track.scrollTo({ left: i * itemW, behavior: 'smooth' });
+      });
+      dotsContainer.appendChild(dot);
+      return dot;
+    });
+
+    carousel.appendChild(dotsContainer);
+
+    const ITEM_W = () => {
+      const gap = parseInt(getComputedStyle(track).gap) || 16;
+      return (items[0] ? items[0].offsetWidth : 260) + gap;
+    };
+
+    prev.addEventListener('click', () => track.scrollBy({ left: -ITEM_W(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left:  ITEM_W(), behavior: 'smooth' }));
 
     const update = () => {
-      prev.style.opacity = track.scrollLeft > 8 ? '1' : '0.3';
+      prev.style.opacity = track.scrollLeft > 8 ? '1' : '0.35';
       const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
-      next.style.opacity = atEnd ? '0.3' : '1';
+      next.style.opacity = atEnd ? '0.35' : '1';
+
+      if (dots.length) {
+        const activeIndex = Math.round(track.scrollLeft / ITEM_W());
+        dots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
+      }
     };
 
     track.addEventListener('scroll', update, { passive: true });

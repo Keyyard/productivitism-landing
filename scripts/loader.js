@@ -6,7 +6,7 @@
 (async function () {
   'use strict';
 
-  const SECTIONS = ['nav', 'hero', 'guide', 'classes', 'screenshots', 'download', 'footer'];
+  const SECTIONS = ['nav', 'hero', 'features', 'guide', 'classes', 'screenshots', 'download', 'footer'];
 
   /* Load all sections in parallel, inject in document order */
   await Promise.all(SECTIONS.map(async (name) => {
