@@ -6,7 +6,7 @@
 [![Download on the App Store](https://img.shields.io/badge/App%20Store-Download-blue?logo=apple)](https://apps.apple.com/vn/app/productivitism-life-rpg/id6761625990)
 [![Website](https://img.shields.io/badge/Website-productivitism.com-green)](https://productivitism.com)
 
-[![](./ss.PNG)]
+![](./ss.PNG)
 
 ---
 
