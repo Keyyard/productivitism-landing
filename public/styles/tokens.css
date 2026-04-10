@@ -25,9 +25,9 @@
 
 :root {
   /* ── Palette ─────────────────────────────────────────────── */
-  --bg:              #1e232e;
-  --bg-dark:         #161a23;
-  --bg-darker:       #0f1117;
+  --bg:              #13161e;
+  --bg-dark:         #0e1118;
+  --bg-darker:       #090b10;
   --card:            #825e40;
   --card-dark:       #523625;
   --card-darker:     #3b2318;

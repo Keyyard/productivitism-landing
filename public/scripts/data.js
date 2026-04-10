@@ -9,7 +9,7 @@ const DATA = {
     subtitle: "Life-maxxing for multitalented individuals.",
     body: "You're a jack-of-all-trades juggling multiple identities. Create pixel-art characters for each role, turn habits into quests, and escape decision paralysis by focusing on one character at a time. Level up your real life.",
     ctaLead: "Begin Your Quest →",
-    appStoreUrl: "#download",
+    appStoreUrl: "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
     googlePlayUrl: "#download",
     sprite: {
       base: "assets/sprites/base/base.png",
@@ -133,9 +133,9 @@ const DATA = {
     title: "BEGIN YOUR QUEST",
     subtitle: "Free during Early Access. No credit card required.",
     tagline: "Free during Early Access",
-    appStoreUrl: "#download",
+    appStoreUrl: "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
     googlePlayUrl: "#download",
-    appStoreText: "COMING SOON",
+    appStoreText: "Download on the",
     googlePlayText: "COMING SOON"
   },
   nav: {
