@@ -105,7 +105,95 @@
 }
 
 .hero-overlay {
-  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* Dark layer so text stays readable over the pixel bg on desktop */
+  background: rgba(10, 12, 16, 0.52);
+}
+
+/* ── HERO SCENE (mobile: contained pixel room panel) ───────── */
+.hero-scene {
+  display: none; /* shown only on mobile via media query */
+  position: relative;
+  width: 100%;
+  background-image: url('../assets/focus/focua-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hero-scene::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 70px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-scene .sprite-stack {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 154px;
+  image-rendering: pixelated;
+  z-index: 3;
+}
+
+.hero-scene .sprite-stack img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+/* ── CREDIBILITY BADGE ─────────────────────────────────────── */
+.hero-credibility {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: rgba(74, 222, 128, 0.07);
+  border: 1px solid rgba(74, 222, 128, 0.28);
+  padding: 5px 12px;
+  margin-bottom: var(--gap-md);
+  font-size: 12px;
+  font-family: var(--font-inter);
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+.hero-credibility strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.credibility-star {
+  color: var(--accent);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.credibility-divider {
+  color: var(--muted-dark);
+  opacity: 0.5;
+}
+
+.credibility-author {
+  color: var(--muted-dark);
+  font-weight: 500;
 }
 
 .scanline {
@@ -161,8 +249,14 @@
   font-size: 15px;
   color: var(--muted);
   line-height: 1.75;
-  margin-bottom: var(--gap-lg);
+  margin-bottom: var(--gap-sm);
   max-width: 420px;
+}
+
+.hero-body--accent {
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: var(--gap-lg);
 }
 
 .hero-cta {
@@ -478,17 +572,35 @@
 @media (max-width: 760px) {
   .features-grid { grid-template-columns: 1fr; }
   .classes-grid  { grid-template-columns: repeat(2, 1fr); }
-  .hero-sprite   { display: none; }
 
-  /* Full overlay when sprite is hidden */
-  .hero-overlay {
-    background: rgba(14, 16, 20, 0.88);
+  /* ── Hero: switch to stacked layout on mobile ── */
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-image: none;
+    background-color: var(--bg);
+    min-height: 100vh;
+    padding-top: 52px;
   }
 
+  /* Show the contained scene panel */
+  .hero-scene {
+    display: block;
+    height: 240px;
+  }
+
+  /* Hide desktop floating sprite and overlay (no bg image on mobile) */
+  .hero-sprite  { display: none; }
+  .hero-overlay { display: none; }
+
+  /* Reset the desktop slide-in animation */
   .hero-content {
+    animation: none;
     margin-left: 0;
-    padding: var(--gap-lg) 24px;
+    padding: var(--gap-lg) 20px var(--gap-xl);
     max-width: 100%;
+    flex: 1;
   }
 
   .hero-body { max-width: 100%; }
@@ -498,6 +610,12 @@
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  /* Credibility badge wraps nicely on narrow screens */
+  .hero-credibility {
+    font-size: 11px;
+    padding: 5px 10px;
   }
 
   /* Nav mobile drawer */
@@ -538,9 +656,10 @@
   :root { --section-pad: 56px 20px; }
 
   .container    { padding: 0 20px; }
-  .hero-content { padding: var(--gap-md) 20px; }
+  .hero-content { padding: var(--gap-md) 20px var(--gap-xl); }
   .hero-sub     { font-size: 20px; }
   .hero-body    { font-size: 14px; }
+  .hero-scene   { height: 210px; }
 
   .classes-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
 

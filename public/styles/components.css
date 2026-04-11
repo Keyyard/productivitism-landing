@@ -226,6 +226,8 @@
 /* ── GUIDE CAROUSEL ─────────────────────────────────────────── */
 .guide-carousel {
   margin-bottom: var(--gap-xl);
+  position: relative;
+  /* Desktop: reserve room for arrow buttons */
   padding: 0 52px;
 }
 
@@ -235,7 +237,7 @@
 
 .guide-carousel-item {
   flex: 0 0 auto;
-  width: 260px;
+  width: 280px;
   scroll-snap-align: start;
   border: 2px solid var(--border);
   overflow: hidden;
@@ -254,6 +256,42 @@
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* ── Mobile carousel: full-bleed peekable scroll ───────────── */
+@media (max-width: 760px) {
+  .guide-carousel {
+    /* Remove arrow padding — use bleed trick instead */
+    padding: 0;
+    /* Extend to screen edges so the peek reads naturally */
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .guide-carousel .ss-track {
+    /* Re-add inset so first item aligns with page content */
+    padding-left: 20px;
+    padding-right: 20px;
+    /* Show ~¼ of the next card as a swipe hint */
+    scroll-padding-left: 20px;
+  }
+
+  .guide-carousel-item {
+    /* 76vw = ~296px on 390px — leaves ~74px peek of next card */
+    width: 76vw;
+    max-width: 300px;
+  }
+
+  /* Hide arrow buttons — swipe is the interaction on touch */
+  .guide-carousel .ss-arrow {
+    display: none;
+  }
+
+  /* Dots sit closer to the track on mobile */
+  .guide-carousel + .ss-dots,
+  .guide-carousel .ss-dots {
+    margin-top: 8px;
+  }
 }
 
 .ss-arrow {
@@ -486,115 +524,80 @@
   display: block;
 }
 
-.ss-gallery {
+/* ── PHONE CAROUSEL ────────────────────────────────────────── */
+.ss-phone-track {
+  display: flex;
+  gap: var(--gap-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 4px 4px var(--gap-lg);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.ss-phone-track::-webkit-scrollbar {
+  display: none;
+}
+
+.ss-phone-item {
+  flex: 0 0 auto;
+  width: 200px;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--gap-lg);
+  gap: 10px;
 }
 
-.ss-featured-frame {
-  width: 240px;
-  border: 2px solid var(--accent);
-  box-shadow: 4px 4px 0 var(--accent-dim);
-  overflow: hidden;
-  background: var(--bg-dark);
-}
-
-.ss-featured-img {
+.ss-phone-frame {
   width: 100%;
   aspect-ratio: 9 / 19.5;
+  border: 2px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
   overflow: hidden;
+  background: var(--bg-dark);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
-.ss-featured-img img {
+.ss-phone-frame:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 4px 8px 0 var(--accent-dim);
+}
+
+.ss-phone-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: opacity 0.18s;
 }
 
-.ss-featured-img img.fading {
-  opacity: 0;
-}
-
-.ss-featured-caption {
-  padding: 8px 12px;
-  background: var(--accent);
-  color: var(--border);
+.ss-phone-item figcaption {
   font-family: var(--font-jersey);
-  font-size: 15px;
+  font-size: 14px;
+  color: var(--muted);
   letter-spacing: 1px;
   text-align: center;
 }
 
-.ss-thumbs {
-  display: flex;
-  gap: var(--gap-sm);
-  justify-content: center;
-}
-
-.ss-thumb {
-  width: 72px;
-  border: 2px solid var(--border);
-  overflow: hidden;
-  cursor: pointer;
-  background: var(--bg-dark);
-  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
-}
-
-.ss-thumb img {
-  width: 100%;
-  aspect-ratio: 9 / 19.5;
-  object-fit: cover;
-  display: block;
-  filter: brightness(0.55) saturate(0.7);
-  transition: filter 0.18s;
-}
-
-.ss-thumb figcaption {
-  padding: 4px 6px;
-  font-family: var(--font-vt323);
-  font-size: 11px;
-  color: var(--muted-dark);
-  letter-spacing: 0.06em;
-  text-align: center;
-  background: var(--card-darker);
-  border-top: 1px solid var(--border);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.ss-thumb:hover {
-  border-color: var(--border-light);
-  transform: translateY(-2px);
-  box-shadow: 2px 4px 0 var(--border);
-}
-
-.ss-thumb:hover img {
-  filter: brightness(0.85) saturate(1);
-}
-
-.ss-thumb.active {
+/* Highlight first phone in each group */
+.ss-phone-item:first-child .ss-phone-frame {
   border-color: var(--accent);
-  box-shadow: 2px 2px 0 var(--accent-dim);
+  box-shadow: 4px 4px 0 var(--accent-dim);
 }
 
-.ss-thumb.active img {
-  filter: brightness(1) saturate(1);
-}
-
-.ss-thumb.active figcaption {
+.ss-phone-item:first-child figcaption {
   color: var(--accent);
-  border-top-color: var(--accent);
 }
 
-@media (max-width: 520px) {
-  .ss-featured-frame { width: 200px; }
-  .ss-thumb { width: 60px; }
-  .ss-thumb figcaption { font-size: 10px; padding: 3px 4px; }
+@media (min-width: 760px) {
+  .ss-phone-item { width: 220px; }
+}
+
+@media (max-width: 480px) {
+  .ss-phone-item { width: 165px; }
+  .ss-phone-item figcaption { font-size: 12px; }
 }
 
 /* ── PIXEL DIVIDER ─────────────────────────────────────────── */

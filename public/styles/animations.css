@@ -80,6 +80,18 @@
   color: var(--accent);
 }
 
+/* ── Mobile: suppress desktop hero animations ──────────────── */
+@media (max-width: 760px) {
+  .hero-content {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+  .hero-sprite {
+    animation: none;
+  }
+}
+
 /* ── Reduced motion ────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .float,

@@ -6,8 +6,9 @@ const DATA = {
   hero: {
     eyebrow: "▶ EARLY ACCESS — FREE",
     title: "PRODUCTIVITISM",
-    subtitle: "Life-maxxing for multitalented individuals.",
-    body: "You're a jack-of-all-trades juggling multiple identities. Create pixel-art characters for each role, turn habits into quests, and escape decision paralysis by focusing on one character at a time. Level up your real life.",
+    subtitle: "Pixel RPG for Habits & Focus",
+    body: "Are you a jack-of-all-trades suffering from a constant identity crisis? You want to code, work out, read, and build a business—but your brain gets overwhelmed, and you end up doing nothing at all.",
+    bodyAccent: "Welcome to Productivitism — the ultimate life-maxxing tool that turns your real-life goals into a cozy, 16-bit RPG.",
     ctaLead: "Begin Your Quest →",
     appStoreUrl: "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
     googlePlayUrl: "#download",

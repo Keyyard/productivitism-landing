@@ -4,13 +4,35 @@
   <!-- Gradient overlay -->
   <div class="hero-overlay" aria-hidden="true"></div>
 
+  <!-- Mobile scene panel: pixel bg + character in a contained frame -->
+  <div class="hero-scene" aria-hidden="true">
+    <div class="sprite-stack">
+      <img src="assets/sprites/base/base.png"       alt="" data-img="hero.sprite.base" />
+      <img src="assets/sprites/skin/skin_tone.png"  alt="" data-img="hero.sprite.skin" />
+      <img src="assets/sprites/hair/hair.png"        alt="" data-img="hero.sprite.hair" />
+      <img src="assets/sprites/tops/tops.png"        alt="" data-img="hero.sprite.tops" />
+      <img src="assets/sprites/bottoms/bottoms.png" alt="" data-img="hero.sprite.bottoms" />
+      <img src="assets/sprites/shoes/shoes.png"     alt="" data-img="hero.sprite.shoes" />
+    </div>
+  </div>
+
   <div class="hero-content">
+    <!-- Credibility badge -->
+    <div class="hero-credibility" role="note" aria-label="By Keyyard, maker of Cut the Rope × Minecraft DLC">
+      <span class="credibility-star" aria-hidden="true">★</span>
+      <span class="credibility-text">From the maker of <strong>Cut the Rope × Minecraft DLC</strong></span>
+      <span class="credibility-divider" aria-hidden="true">·</span>
+      <span class="credibility-author">Keyyard</span>
+    </div>
+
     <span class="hero-eyebrow" data-text="hero.eyebrow">▶ EARLY ACCESS — FREE</span>
     <h1 class="hero-title" data-text="hero.title">PRODUCTIVI<wbr>TISM<span class="sr-only"> — Gamified Pixel Productivity App for Multitalented Individuals</span></h1>
     <p class="hero-sub" data-text="hero.subtitle">Life-maxxing for multitalented individuals.</p>
     <p class="hero-body" data-text="hero.body">
-      Track habits. Complete quests. Enter deep focus. Level up your character
-      while leveling up your life — one day at a time.
+      Are you a jack-of-all-trades suffering from a constant identity crisis? You want to code, work out, read, and build a business—but your brain gets overwhelmed, and you end up doing nothing at all.
+    </p>
+    <p class="hero-body hero-body--accent" data-text="hero.bodyAccent">
+      Welcome to Productivitism — the ultimate life-maxxing tool that turns your real-life goals into a cozy, 16-bit RPG.
     </p>
     <div class="hero-cta">
       <a href="#download" class="btn btn-store" aria-label="Download on the App Store" data-href="hero.appStoreUrl">
@@ -35,7 +57,7 @@
     </div>
   </div>
 
-  <!-- Floating pixel character -->
+  <!-- Floating pixel character (desktop) -->
   <div class="hero-sprite float" aria-hidden="true" data-sprite="hero.sprite">
     <div class="sprite-stack">
       <img src="assets/sprites/base/base.png"       alt="" data-img="hero.sprite.base" />
