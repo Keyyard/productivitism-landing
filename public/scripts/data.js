@@ -7,8 +7,8 @@ const DATA = {
     eyebrow: "▶ EARLY ACCESS — FREE",
     title: "PRODUCTIVITISM",
     subtitle: "Pixel RPG for Habits & Focus",
-    body: "Are you a jack-of-all-trades suffering from a constant identity crisis? You want to code, work out, read, and build a business—but your brain gets overwhelmed, and you end up doing nothing at all.",
-    bodyAccent: "Welcome to Productivitism — the ultimate life-maxxing tool that turns your real-life goals into a cozy, 16-bit RPG.",
+    body: "Productivitism is a pixel RPG built for habits, focus, and ADHD brains that juggle too many goals at once. If you want to code, work out, read, and build something meaningful without burnout, you can turn each life role into a character and make progress one quest at a time.",
+    bodyAccent: "Welcome to the cozy life RPG app that helps you gamify your routine without guilt, punishment, or streak anxiety.",
     ctaLead: "Begin Your Quest →",
     appStoreUrl: "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
     googlePlayUrl: "#download",
@@ -113,19 +113,19 @@ const DATA = {
     screenshots: [
       {
         src: "assets/screenshots/screenshot-1.jpeg",
-        alt: "Home screen with character and daily stats"
+        alt: "Pixel art habit tracker RPG home screen with life role character and daily progress"
       },
       {
         src: "assets/screenshots/screenshot-2.jpeg",
-        alt: "Quest board with tasks and difficulty ratings"
+        alt: "Gamified productivity app quest board with tasks and difficulty-based XP"
       },
       {
         src: "assets/screenshots/screenshot-3.jpeg",
-        alt: "Habit tracking with streaks and XP rewards"
+        alt: "Habit tracker RPG screen showing rituals, streaks, and XP rewards"
       },
       {
         src: "assets/screenshots/screenshot-4.jpeg",
-        alt: "Deep focus sanctuary with ambient study room"
+        alt: "ADHD-friendly focus room with ambient sounds in the Productivitism life RPG app"
       }
     ]
   },
