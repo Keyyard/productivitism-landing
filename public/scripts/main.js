@@ -184,7 +184,8 @@
 })();
 
 /* ── Android waitlist handler ──────────────────────────────── */
-function handleAndroidWaitlist() {
+function handleAndroidWaitlist(e) {
+  e.preventDefault();
   const input = document.getElementById('android-email');
   const msg   = document.getElementById('android-waitlist-msg');
   if (!input || !msg) return;
@@ -199,17 +200,21 @@ function handleAndroidWaitlist() {
     return;
   }
 
-  // Store locally and show confirmation
-  // (Replace the fetch below with your preferred backend / Mailchimp / Resend etc.)
-  const saved = JSON.parse(localStorage.getItem('android-waitlist') || '[]');
-  if (!saved.includes(email)) {
-    saved.push(email);
-    localStorage.setItem('android-waitlist', JSON.stringify(saved));
-  }
+  // Submit to Google Form (no-cors, fire and forget)
+  const FORM_ID = '1FAIpQLSd2JcMJHXaLXaxblEHPUMwJmHULWkNs8mDfJeLeF3lBX5OKjw';
+  const ENTRY   = 'entry.1276183927';
+  const url     = \`https://docs.google.com/forms/d/e/\${FORM_ID}/formResponse\`;
+
+  fetch(url, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: \`\${ENTRY}=\${encodeURIComponent(email)}\`
+  }).catch(() => {}); // no-cors always throws — submissions still go through
 
   msg.style.color = 'var(--accent)';
   msg.textContent = "You're on the list. We'll notify you when Android launches.";
   input.value = '';
   input.disabled = true;
-  document.querySelector('.android-waitlist-btn').disabled = true;
+  document.querySelector('.android-waitlist-btn') && (document.querySelector('.android-waitlist-btn').disabled = true);
 }

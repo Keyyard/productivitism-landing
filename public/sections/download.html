@@ -22,19 +22,21 @@
             <img src="assets/icons/google.png" alt="" class="btn-store-icon" aria-hidden="true" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;" />
             Android — <span style="color:var(--accent);">Coming Soon</span>
           </p>
-          <div class="android-waitlist-form">
+          <form class="android-waitlist-form" id="android-waitlist-form" onsubmit="handleAndroidWaitlist(event)">
             <input
               type="email"
               id="android-email"
+              name="entry.1276183927"
               class="android-waitlist-input"
               placeholder="your@email.com"
               aria-label="Email address for Android waitlist"
               autocomplete="email"
+              required
             />
-            <button type="button" class="android-waitlist-btn" onclick="handleAndroidWaitlist()">
+            <button type="submit" class="android-waitlist-btn">
               NOTIFY ME
             </button>
-          </div>
+          </form>
           <p class="android-waitlist-note" id="android-waitlist-msg" aria-live="polite"></p>
         </div>
 
