@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────── -->
+  <title>Productivitism vs Habitica — What's the Actual Difference?</title>
+  <meta name="description" content="Side-by-side comparison of Productivitism and Habitica. Both gamify habits with RPG elements. Here's what's different and who each one is built for." />
+  <link rel="canonical" href="https://productivitism.com/vs-habitica" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+  <!-- ── Favicon ────────────────────────────────────────────── -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/icon.png" />
+
+  <!-- ── Open Graph / Social ───────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://productivitism.com/vs-habitica" />
+  <meta property="og:title"       content="Productivitism vs Habitica — What's the Actual Difference?" />
+  <meta property="og:description" content="Side-by-side comparison of Productivitism and Habitica. Both gamify habits with RPG elements. Here's what's different and who each one is built for." />
+  <meta property="og:image"       content="https://productivitism.com/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@keyyard" />
+  <meta name="twitter:title"       content="Productivitism vs Habitica — What's the Actual Difference?" />
+  <meta name="twitter:description" content="Both gamify habits with RPG elements. Here's the honest breakdown of what's different and who each one is built for." />
+  <meta name="twitter:image"       content="https://productivitism.com/og-image.png" />
+
+  <!-- ── Theme color ────────────────────────────────────────── -->
+  <meta name="theme-color" content="#13161e" />
+
+  <!-- ── Structured Data ────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Productivitism vs Habitica — What's the Actual Difference?",
+    "description": "Side-by-side comparison of Productivitism and Habitica. Both gamify habits with RPG elements. Here's what's different and who each one is built for.",
+    "url": "https://productivitism.com/vs-habitica",
+    "author": {
+      "@type": "Person",
+      "name": "Hieu Trinh"
+    }
+  }
+  </script>
+
+  <!-- ── Resource Hints ─────────────────────────────────────── -->
+  <link rel="preload" as="font" href="assets/fonts/Jersey10-Regular.ttf" type="font/ttf" crossorigin />
+  <link rel="preload" as="font" href="assets/fonts/VT323-Regular.ttf" type="font/ttf" crossorigin />
+
+  <!-- ── Styles ─────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+
+  <!-- ── Page-specific styles ───────────────────────────────── -->
+  <style>
+    /* ── Page wrapper ──────────────────────────────────────── */
+    .vs-page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    /* ── Page header ───────────────────────────────────────── */
+    .vs-eyebrow {
+      font-family: var(--font-vt323);
+      font-size: 16px;
+      color: var(--accent);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: var(--gap-sm);
+    }
+
+    .vs-h1 {
+      font-family: var(--font-jersey);
+      font-size: clamp(26px, 4.5vw, 44px);
+      color: var(--text);
+      letter-spacing: 1px;
+      line-height: 1.1;
+      margin-bottom: var(--gap-md);
+    }
+
+    .vs-intro {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 640px;
+      margin-bottom: var(--gap-xl);
+    }
+
+    /* ── Pixel divider ─────────────────────────────────────── */
+    .vs-pixel-divider {
+      height: 4px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--border) 0, var(--border) 8px,
+        transparent 8px, transparent 12px
+      );
+      margin: var(--gap-xl) 0;
+      opacity: 0.5;
+    }
+
+    /* ── Section labels + headings ─────────────────────────── */
+    .vs-section-label {
+      font-family: var(--font-vt323);
+      font-size: 16px;
+      color: var(--accent);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: var(--gap-sm);
+    }
+
+    .vs-h2 {
+      font-family: var(--font-jersey);
+      font-size: clamp(22px, 3.5vw, 34px);
+      color: var(--text);
+      letter-spacing: 1px;
+      margin-bottom: var(--gap-md);
+    }
+
+    .vs-h2--habitica { color: var(--parchment-dim); }
+    .vs-h2--productivitism { color: var(--accent); }
+
+    .vs-body {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 680px;
+      margin-bottom: var(--gap-md);
+    }
+
+    /* ── Comparison cards ──────────────────────────────────── */
+    .vs-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-lg);
+      margin-bottom: var(--gap-xl);
+    }
+
+    .vs-card {
+      background: var(--card-dark);
+      border: 2px solid var(--border);
+      box-shadow: var(--shadow-card);
+      padding: var(--gap-lg);
+      position: relative;
+    }
+
+    .vs-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .vs-card--habitica::before { background: var(--parchment-dim); }
+    .vs-card--productivitism::before { background: var(--accent); }
+
+    .vs-card-name {
+      font-family: var(--font-jersey);
+      font-size: 22px;
+      letter-spacing: 1px;
+      margin-bottom: var(--gap-md);
+    }
+
+    .vs-card--habitica .vs-card-name { color: var(--parchment-dim); }
+    .vs-card--productivitism .vs-card-name { color: var(--accent); }
+
+    /* ── Comparison section block ──────────────────────────── */
+    .vs-section-block {
+      background: var(--card-dark);
+      border: 2px solid var(--border);
+      box-shadow: var(--shadow-card);
+      padding: var(--gap-lg);
+      margin-bottom: var(--gap-lg);
+      position: relative;
+    }
+
+    .vs-section-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .vs-section-block--habitica-good::before  { background: var(--parchment-dim); }
+    .vs-section-block--habitica-bad::before   { background: var(--border-light); }
+    .vs-section-block--productivitism::before { background: var(--accent); }
+
+    .vs-block-heading {
+      font-family: var(--font-jersey);
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-bottom: var(--gap-md);
+      padding-bottom: var(--gap-sm);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .vs-section-block--habitica-good  .vs-block-heading  { color: var(--parchment-dim); }
+    .vs-section-block--habitica-bad   .vs-block-heading  { color: var(--muted); }
+    .vs-section-block--productivitism .vs-block-heading  { color: var(--accent); }
+
+    /* ── Lists ─────────────────────────────────────────────── */
+    .vs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .vs-list li {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .vs-list li::before {
+      position: absolute;
+      left: 0;
+      font-family: var(--font-jersey);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .vs-section-block--habitica-good  .vs-list li::before { content: '›'; color: var(--parchment-dim); }
+    .vs-section-block--habitica-bad   .vs-list li::before { content: '›'; color: var(--muted-dark); }
+    .vs-section-block--productivitism .vs-list li::before { content: '›'; color: var(--accent); }
+
+    .vs-list strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ── Summary / verdict ─────────────────────────────────── */
+    .vs-summary {
+      margin-bottom: var(--gap-xl);
+    }
+
+    .vs-summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-lg);
+    }
+
+    .vs-verdict-card {
+      background: var(--card-darker);
+      border: 2px solid var(--border);
+      padding: var(--gap-lg);
+      position: relative;
+    }
+
+    .vs-verdict-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .vs-verdict-card--habitica::before       { background: var(--parchment-dim); }
+    .vs-verdict-card--productivitism::before { background: var(--accent); }
+
+    .vs-verdict-label {
+      font-family: var(--font-jersey);
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: var(--gap-sm);
+    }
+
+    .vs-verdict-card--habitica       .vs-verdict-label { color: var(--parchment-dim); }
+    .vs-verdict-card--productivitism .vs-verdict-label { color: var(--accent); }
+
+    .vs-verdict-heading {
+      font-family: var(--font-jersey);
+      font-size: 19px;
+      color: var(--text);
+      letter-spacing: 0.5px;
+      margin-bottom: var(--gap-sm);
+    }
+
+    .vs-verdict-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .vs-verdict-list li {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .vs-verdict-card--habitica       .vs-verdict-list li::before { content: '›'; position: absolute; left: 0; color: var(--parchment-dim); }
+    .vs-verdict-card--productivitism .vs-verdict-list li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
+
+    /* ── CTA section ───────────────────────────────────────── */
+    .vs-cta {
+      text-align: center;
+      padding: var(--gap-xl) 0 var(--gap-lg);
+      border-top: 2px solid var(--border);
+    }
+
+    .vs-cta-label {
+      font-family: var(--font-vt323);
+      font-size: 20px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      margin-bottom: var(--gap-md);
+    }
+
+    /* ── Habitica notice ───────────────────────────────────── */
+    .vs-note {
+      display: flex;
+      gap: 10px;
+      background: var(--bg-darker);
+      border: 1px solid var(--border-light);
+      padding: 12px 16px;
+      margin-bottom: var(--gap-xl);
+      font-size: 13px;
+      color: var(--muted-dark);
+      line-height: 1.6;
+    }
+
+    .vs-note-icon {
+      font-family: var(--font-jersey);
+      font-size: 16px;
+      color: var(--muted-dark);
+      flex-shrink: 0;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 760px) {
+      .vs-page         { padding: 100px 20px 60px; }
+      .vs-cards        { grid-template-columns: 1fr; }
+      .vs-summary-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .vs-page { padding: 90px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ────────────────────────────────────────────────── -->
+  <nav class="nav" aria-label="Main navigation">
+    <a class="nav-logo" href="/" aria-label="Productivitism home">
+      PRODUCTIVI<span>TISM</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#features">Features</a>
+      <a href="/#guide">Guide</a>
+      <a href="/#classes">Classes</a>
+      <a href="/#screenshots">Screenshots</a>
+      <a href="https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990" class="nav-cta" target="_blank" rel="noopener noreferrer">Download</a>
+    </div>
+    <button class="nav-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+    <div class="vs-page">
+
+      <!-- ── Page header ──────────────────────────────────── -->
+      <span class="vs-eyebrow">▶ App Comparison</span>
+      <h1 class="vs-h1">Productivitism vs. Habitica: Two RPG Habit Trackers, Different Problems</h1>
+      <p class="vs-intro">
+        Habitica and Productivitism both turn your habits into an RPG. Both have pixel art, XP, and character progression. But they solve different problems. Here's the honest breakdown.
+      </p>
+
+      <div class="vs-note">
+        <span class="vs-note-icon">i</span>
+        <span>This comparison is based on publicly available information about both apps. Habitica is a well-established app with a large community and is genuinely good at what it does. This page exists to explain the difference, not to dismiss either option.</span>
+      </div>
+
+      <div class="vs-pixel-divider"></div>
+
+      <!-- ── What Habitica does well ───────────────────────── -->
+      <span class="vs-section-label">Habitica_</span>
+      <h2 class="vs-h2 vs-h2--habitica">What Habitica Does Well</h2>
+      <p class="vs-body">
+        Habitica has been building its RPG habit system since 2013. For people who want social accountability and a unified task list with community features, it remains one of the most complete options available.
+      </p>
+
+      <div class="vs-section-block vs-section-block--habitica-good">
+        <h3 class="vs-block-heading">Habitica's Strengths</h3>
+        <ul class="vs-list">
+          <li><strong>Social accountability via parties and boss battles:</strong> invite friends, form a party, and defeat bosses together. Missed habits deal damage to your whole group, which is a strong motivator for some users.</li>
+          <li><strong>Large active community:</strong> one of the biggest communities of any habit app. Guilds, challenges, and social support have been core to the product for years.</li>
+          <li><strong>Highly customizable task types:</strong> Habits (repeatable actions), Dailies (scheduled recurring tasks), To-Dos (one-off tasks), and Rewards (redeemable treats). Each type works differently and the flexibility is genuine.</li>
+          <li><strong>Free for core features:</strong> the main task tracking, party system, and RPG mechanics are free. Cosmetic items require gems (purchased or earned), but nothing functional is paywalled.</li>
+          <li><strong>Available on iOS, Android, and Web:</strong> full cross-platform access with sync across all devices.</li>
+        </ul>
+      </div>
+
+      <!-- ── Where Habitica falls short ───────────────────── -->
+      <div class="vs-section-block vs-section-block--habitica-bad">
+        <h3 class="vs-block-heading">Where Habitica Falls Short (for some users)</h3>
+        <ul class="vs-list">
+          <li><strong>One character for everything:</strong> your Developer goals and your Fitness goals share the same XP bar and the same daily list. If you're managing multiple distinct life roles, everything gets mixed into one view.</li>
+          <li><strong>Dated UI and design:</strong> the visual design reflects its age for some users. It works, but the experience can feel cluttered compared to newer apps.</li>
+          <li><strong>No native focus timer:</strong> Habitica doesn't include a built-in Pomodoro or focus session feature. You'd need a separate app for focused work tracking.</li>
+          <li><strong>Reduced social features:</strong> community guilds were removed in 2023, which reduced a meaningful part of what made Habitica distinctive for social users.</li>
+        </ul>
+      </div>
+
+      <div class="vs-pixel-divider"></div>
+
+      <!-- ── What Productivitism does instead ─────────────── -->
+      <span class="vs-section-label">Productivitism_</span>
+      <h2 class="vs-h2 vs-h2--productivitism">What Productivitism Does Instead</h2>
+      <p class="vs-body">
+        Productivitism is built around a different premise: that most people aren't one thing, and a single character or inbox doesn't reflect how real life is structured. Multi-Character Architecture is the core design decision that drives every other feature.
+      </p>
+
+      <div class="vs-section-block vs-section-block--productivitism">
+        <h3 class="vs-block-heading">Productivitism's Approach</h3>
+        <ul class="vs-list">
+          <li>
+            <strong>Multi-Character Architecture:</strong> create a separate pixel RPG character for each life role (The Developer, The Athlete, The Student, and so on). Each character has its own habits, quest board, XP bar, and level. Progress in one role doesn't affect or blur progress in another.
+          </li>
+          <li>
+            <strong>Per-character habit tracking and quests:</strong> each character owns its own daily rituals and quest board. When you open the app, you choose which identity to work from today. No mixed task list, no context switching noise.
+          </li>
+          <li>
+            <strong>Cozy Focus Room with ambient sounds:</strong> a built-in focus session feature with layered ambient soundscapes and your pixel art character present in the scene. Focus time is tracked per character, so you can see where your actual hours go across roles.
+          </li>
+          <li>
+            <strong>Non-punitive design:</strong> missed habits show a "Dimming Flame" visual cue instead of HP loss. The philosophy is progress-based rather than punishment-based, which suits users who find guilt-driven mechanics counterproductive.
+          </li>
+          <li>
+            <strong>Voice memo capture on any task:</strong> attach a voice note to any quest or task without interrupting your flow. Useful for brain dumps, project context, or reminders.
+          </li>
+        </ul>
+      </div>
+
+      <div class="vs-pixel-divider"></div>
+
+      <!-- ── Honest summary / verdict ─────────────────────── -->
+      <span class="vs-section-label">The Verdict_</span>
+      <h2 class="vs-h2">The Honest Summary</h2>
+      <p class="vs-body">
+        Neither app is objectively better. They're designed around different core problems. The right choice depends on how you work.
+      </p>
+
+      <div class="vs-summary">
+        <div class="vs-summary-grid">
+          <div class="vs-verdict-card vs-verdict-card--habitica">
+            <p class="vs-verdict-label">Choose Habitica if...</p>
+            <h3 class="vs-verdict-heading">You want social momentum</h3>
+            <ul class="vs-verdict-list">
+              <li>You want to do party battles and quests with friends</li>
+              <li>Community accountability keeps you consistent</li>
+              <li>You prefer a single unified task list across all your goals</li>
+              <li>You want iOS, Android, and Web all syncing together</li>
+              <li>You've been using it for years and it works for you</li>
+            </ul>
+          </div>
+          <div class="vs-verdict-card vs-verdict-card--productivitism">
+            <p class="vs-verdict-label">Choose Productivitism if...</p>
+            <h3 class="vs-verdict-heading">You juggle multiple identities</h3>
+            <ul class="vs-verdict-list">
+              <li>You're actively managing multiple distinct life roles at the same time</li>
+              <li>You want each identity tracked separately, with its own XP and habits</li>
+              <li>Guilt-based or punishment-based mechanics have burned you out before</li>
+              <li>You want a built-in focus timer alongside habit tracking</li>
+              <li>You're on iOS and want an early-access free app to grow with</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="vs-pixel-divider"></div>
+
+      <!-- ── CTA ────────────────────────────────────────────── -->
+      <div class="vs-cta">
+        <p class="vs-cta-label">FREE ON iOS | EARLY ACCESS</p>
+        <a
+          href="https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990"
+          class="btn btn-primary btn-lg"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Productivitism free on the App Store"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          Download Productivitism Free on iOS
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-logo">PRODUCTIVITISM</div>
+        <div class="footer-tagline">Life-maxxing for multitalented individuals.</div>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/#features">Features</a>
+        <a href="/#guide">Guide</a>
+        <a href="/#classes">Classes</a>
+        <a href="/#screenshots">Screenshots</a>
+        <a href="/#download">Download</a>
+      </nav>
+
+      <div class="footer-social" aria-label="Social links">
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/productivitism.app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/keyyard" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:contact@keyyard.xyz" aria-label="Send email">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms &amp; Conditions</a>
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple EULA</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Productivitism. All rights reserved.</p>
+        <p class="footer-copy">Made by <a href="https://keyyard.xyz" target="_blank" rel="noopener noreferrer">keyyard</a></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Mobile nav toggle (no loader.js) -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function () {
+        var open = links.classList.toggle('nav-links--open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+
+</body>
+</html>
