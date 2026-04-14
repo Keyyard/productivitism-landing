@@ -201,8 +201,8 @@ function handleAndroidWaitlist(e) {
   }
 
   // Submit to Google Form (no-cors, fire and forget)
-  const FORM_ID = '1FAIpQLSd2JcMJHXaLXaxblEHPUMwJmHULWkNs8mDfJeLeF3lBX5OKjw';
-  const ENTRY   = 'entry.1276183927';
+  const FORM_ID = '1FAIpQLSdPxf-FDgaXb6OCxJKEwhR7M5EfYjdVXQuJHwyqvrJshnTLKQ';
+  const ENTRY   = 'entry.1816769068';
   const url     = \`https://docs.google.com/forms/d/e/\${FORM_ID}/formResponse\`;
 
   fetch(url, {
