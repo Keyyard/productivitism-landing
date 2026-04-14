@@ -54,5 +54,3 @@ Stop treating your goals like a boring checklist. Your life is a sandbox game. I
 ## 🏷️ Keywords
 
 `gamify` `rpg` `habit` `pixel` `focus` `adhd` `timer` `quest` `level` `avatar` `pomodoro` `tracker` `routine` `xp` `cozy`
-
-<a href="https://www.producthunt.com/products/productivitism?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-productivitism" target="_blank" rel="noopener noreferrer"><img alt="Productivitism - productivity,pixel,rpg,cozy,note,focus,adhd | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1116533&amp;theme=neutral&amp;t=1775886244205"></a>
