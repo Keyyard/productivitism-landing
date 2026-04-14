@@ -96,7 +96,7 @@
   overflow: hidden;
   padding-top: 60px;
 
-  background-image: url('../assets/focus/focua-bg.png');
+  background-image: url('../assets/focus/focus-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -118,7 +118,7 @@
   display: none; /* shown only on mobile via media query */
   position: relative;
   width: 100%;
-  background-image: url('../assets/focus/focua-bg.png');
+  background-image: url('../assets/focus/focus-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

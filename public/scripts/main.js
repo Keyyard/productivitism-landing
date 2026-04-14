@@ -182,3 +182,34 @@
   });
 
 })();
+
+/* ── Android waitlist handler ──────────────────────────────── */
+function handleAndroidWaitlist() {
+  const input = document.getElementById('android-email');
+  const msg   = document.getElementById('android-waitlist-msg');
+  if (!input || !msg) return;
+
+  const email = input.value.trim();
+  const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  if (!valid) {
+    msg.style.color = 'var(--destructive)';
+    msg.textContent = 'Enter a valid email address.';
+    input.focus();
+    return;
+  }
+
+  // Store locally and show confirmation
+  // (Replace the fetch below with your preferred backend / Mailchimp / Resend etc.)
+  const saved = JSON.parse(localStorage.getItem('android-waitlist') || '[]');
+  if (!saved.includes(email)) {
+    saved.push(email);
+    localStorage.setItem('android-waitlist', JSON.stringify(saved));
+  }
+
+  msg.style.color = 'var(--accent)';
+  msg.textContent = "You're on the list. We'll notify you when Android launches.";
+  input.value = '';
+  input.disabled = true;
+  document.querySelector('.android-waitlist-btn').disabled = true;
+}

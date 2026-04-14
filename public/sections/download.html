@@ -17,13 +17,26 @@
           </span>
         </a>
 
-        <a href="#" class="btn btn-store btn-store-lg" aria-label="Get it on Google Play" data-href="download.googlePlayUrl">
-          <img src="assets/icons/google.png" alt="" class="btn-store-icon" aria-hidden="true" />
-          <span class="btn-store-text">
-            <span class="btn-store-sub" data-text="download.googlePlayText">Get it on</span>
-            <span class="btn-store-name">Google Play</span>
-          </span>
-        </a>
+        <div class="android-waitlist" role="form" aria-label="Android waitlist">
+          <p class="android-waitlist-label">
+            <img src="assets/icons/google.png" alt="" class="btn-store-icon" aria-hidden="true" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;" />
+            Android — <span style="color:var(--accent);">Coming Soon</span>
+          </p>
+          <div class="android-waitlist-form">
+            <input
+              type="email"
+              id="android-email"
+              class="android-waitlist-input"
+              placeholder="your@email.com"
+              aria-label="Email address for Android waitlist"
+              autocomplete="email"
+            />
+            <button type="button" class="android-waitlist-btn" onclick="handleAndroidWaitlist()">
+              NOTIFY ME
+            </button>
+          </div>
+          <p class="android-waitlist-note" id="android-waitlist-msg" aria-live="polite"></p>
+        </div>
 
       </div>
 

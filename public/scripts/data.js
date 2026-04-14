@@ -137,7 +137,7 @@ const DATA = {
     appStoreUrl: "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
     googlePlayUrl: "#download",
     appStoreText: "Download on the",
-    googlePlayText: "COMING SOON"
+    googlePlayText: "Android — Notify Me"
   },
   nav: {
     links: [
