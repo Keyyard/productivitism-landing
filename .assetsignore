@@ -17,7 +17,4 @@ IMAGES_NEEDED.md
 .gitignore
 .assetsignore
 llms.txt
-robots.txt
-sitemap.xml
 .DS_Store
-
