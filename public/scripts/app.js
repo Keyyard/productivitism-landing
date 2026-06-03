@@ -320,7 +320,7 @@
   };
 
   (async function initApp() {
-    const sections = ['nav', 'hero', 'features', 'guide', 'classes', 'screenshots', 'download', 'footer'];
+    const sections = ['nav', 'hero', 'features', 'guide', 'classes', 'research', 'screenshots', 'download', 'footer'];
 
     await Promise.all(
       sections.map(async (name) => {

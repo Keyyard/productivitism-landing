@@ -49,6 +49,13 @@
   --font-vt323:      'VT323', 'Courier New', monospace;
   --font-inter:      'Inter', system-ui, -apple-system, sans-serif;
 
+  /* ── Button size scale (single source of truth) ─────────────── */
+  --btn-pad-xs:  6px 12px;   --btn-font-xs: 14px;
+  --btn-pad-sm:  8px 16px;   --btn-font-sm: 16px;
+  --btn-pad-md:  10px 20px;  --btn-font-md: 18px;
+  --btn-pad-lg:  12px 24px;  --btn-font-lg: 20px;
+  --btn-pad-xl:  14px 28px;  --btn-font-xl: 22px;
+
   /* ── Spacing ─────────────────────────────────────────────── */
   --gap-xs:   4px;
   --gap-sm:   8px;
@@ -326,9 +333,16 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.5;
 }
 
-.credibility-author {
-  color: var(--muted-dark);
-  font-weight: 500;
+.credibility-research {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.15s;
+}
+
+.credibility-research:hover {
+  border-bottom-color: var(--accent);
 }
 
 .scanline {
@@ -345,12 +359,25 @@ h1, h2, h3, h4, h5, h6 {
   );
 }
 
+/* ── HERO GRID (desktop: text left, live preview right) ────── */
+.hero-grid {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-xl) 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
 .hero-content {
   position: relative;
   z-index: 3;
+  min-width: 0;
   max-width: 560px;
-  padding: var(--gap-xl) 0;
-  margin-left: max(24px, calc((100vw - var(--max-width)) / 2 + 24px));
 }
 
 .hero-eyebrow {
@@ -398,14 +425,113 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  align-items: center;
+  align-items: stretch;
 }
 
-.hero-sprite {
-  position: absolute;
-  right: max(40px, calc((100vw - var(--max-width)) / 2 + 80px));
-  bottom: 100px;
+.hero-learn-more {
+  display: inline-block;
+  margin-top: var(--gap-md);
+  font-family: var(--font-vt323);
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.hero-learn-more:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── LIVE WEB APP PREVIEW (browser-chrome mockup) ──────────── */
+.hero-preview {
+  position: relative;
   z-index: 3;
+}
+
+.browser-frame {
+  border: 2px solid var(--border);
+  background: var(--card-darker);
+  box-shadow: 6px 6px 0 var(--border);
+  overflow: hidden;
+}
+
+.browser-chrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--card-dark);
+  border-bottom: 2px solid var(--border);
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.browser-dot--red   { background: #ef5f5f; }
+.browser-dot--amber { background: #f5b942; }
+.browser-dot--green { background: var(--accent); }
+
+.browser-url {
+  margin-left: 10px;
+  font-family: var(--font-vt323);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.browser-viewport {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-dark);
+}
+
+.browser-viewport iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  /* Scale a desktop viewport down to fit the framed mockup */
+  pointer-events: none;
+}
+
+.browser-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: var(--gap-lg);
+  text-decoration: none;
+  background: linear-gradient(to bottom, rgba(9, 11, 16, 0) 55%, rgba(9, 11, 16, 0.75));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.browser-overlay:hover,
+.browser-overlay:focus-visible {
+  opacity: 1;
+}
+
+.browser-overlay-label {
+  font-family: var(--font-jersey);
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--border);
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 8px 20px;
+  box-shadow: 3px 3px 0 var(--accent-dim);
 }
 
 .sprite-stack {
@@ -514,6 +640,39 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.download-inner .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--gap-lg);
+}
+
+/* Primary web-app callout — install-free path comes first */
+.download-webapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-lg);
+}
+
+.download-webapp .btn { width: auto; }
+
+.download-webapp-note {
+  font-family: var(--font-vt323);
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.download-divider {
+  font-family: var(--font-vt323);
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-dark);
+  margin-bottom: var(--gap-md);
 }
 
 .download-badges {
@@ -725,17 +884,22 @@ h1, h2, h3, h4, h5, h6 {
     height: 240px;
   }
 
-  /* Hide desktop floating sprite and overlay (no bg image on mobile) */
-  .hero-sprite  { display: none; }
+  /* Hide desktop live preview and overlay (no bg image on mobile) */
+  .hero-preview { display: none; }
   .hero-overlay { display: none; }
+
+  /* Single-column stacked hero on mobile */
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0;
+    gap: 0;
+  }
 
   /* Reset the desktop slide-in animation */
   .hero-content {
     animation: none;
-    margin-left: 0;
     padding: var(--gap-lg) 20px var(--gap-xl);
     max-width: 100%;
-    flex: 1;
   }
 
   .hero-body { max-width: 100%; }
@@ -747,11 +911,16 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
   }
 
+  .hero-learn-more { align-self: flex-start; }
+
   /* Credibility badge wraps nicely on narrow screens */
   .hero-credibility {
     font-size: 11px;
     padding: 5px 10px;
   }
+
+  /* Drop the long research detail on narrow viewports */
+  .credibility-research-long { display: none; }
 
   /* Nav mobile drawer */
   .nav-links {
@@ -805,14 +974,19 @@ h1, h2, h3, h4, h5, h6 {
    COMPONENTS — Buttons, cards, badges, tabs, carousel
    ============================================================ */
 
-/* ── BUTTONS (base) ────────────────────────────────────────── */
+/* ── BUTTONS — unified system ───────────────────────────────── *
+   One .btn base + explicit size modifiers (--xs…--xl) and intent
+   modifiers (--primary/--store/--ghost/--waitlist/--icon-only).
+   Sizes come from tokens.css. No per-instance inline overrides. */
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 20px;
+  /* default size = md */
+  padding: var(--btn-pad-md);
+  font-size: var(--btn-font-md);
   font-family: var(--font-jersey);
-  font-size: 18px;
   letter-spacing: 1px;
   border: 2px solid var(--border);
   box-shadow: var(--shadow-btn);
@@ -833,62 +1007,71 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
 }
 
-.btn-primary {
+/* ── Size scale (one source of truth) ──────────────────────── */
+.btn--xs { padding: var(--btn-pad-xs); font-size: var(--btn-font-xs); }
+.btn--sm { padding: var(--btn-pad-sm); font-size: var(--btn-font-sm); }
+.btn--md { padding: var(--btn-pad-md); font-size: var(--btn-font-md); }
+.btn--lg { padding: var(--btn-pad-lg); font-size: var(--btn-font-lg); }
+.btn--xl { padding: var(--btn-pad-xl); font-size: var(--btn-font-xl); }
+
+/* ── Intent: PRIMARY (web app — accent filled) ─────────────── */
+.btn--primary {
   background: var(--accent);
   color: var(--border);
+  border-color: var(--accent);
+  font-weight: 700;
 }
 
-.btn-ghost {
+/* ── Intent: GHOST (outlined secondary) ────────────────────── */
+.btn--ghost {
   background: transparent;
   color: var(--text);
   border-color: var(--border-light);
 }
 
-.btn-ghost:hover {
+.btn--ghost:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.btn-lg {
-  padding: 12px 24px;
-  font-size: 20px;
+/* ── Intent: WAITLIST (dashed border — Android) ────────────── */
+.btn--waitlist {
+  background: transparent;
+  color: var(--text);
+  border-style: dashed;
+  border-color: var(--border-light);
 }
 
-/* ── STORE BUTTONS ─────────────────────────────────────────── */
-.btn-store {
-  display: inline-flex;
-  align-items: center;
+.btn--waitlist:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Intent: ICON-ONLY (square) ────────────────────────────── */
+.btn--icon-only {
+  padding: 10px;
+  aspect-ratio: 1;
+}
+
+/* ── Intent: STORE (dark wood + stacked label) ─────────────── */
+.btn--store {
   gap: 12px;
-  padding: 10px 20px;
   background: var(--card-dark);
-  border: 2px solid var(--border);
-  box-shadow: var(--shadow-btn);
-  cursor: pointer;
-  transition: transform 0.12s, box-shadow 0.12s;
-  text-decoration: none;
-}
-
-.btn-store:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 var(--border);
-}
-
-.btn-store-lg {
-  padding: 14px 24px;
-  gap: 14px;
+  color: var(--text);
 }
 
 .btn-store-icon {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
   color: var(--text);
   fill: var(--text);
 }
 
-.btn-store-lg .btn-store-icon {
-  width: 34px;
-  height: 34px;
+.btn--lg .btn-store-icon,
+.btn--xl .btn-store-icon {
+  width: 32px;
+  height: 32px;
 }
 
 .btn-store-text {
@@ -904,16 +1087,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
   font-family: var(--font-inter);
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .btn-store-name {
   font-family: var(--font-jersey);
-  font-size: 20px;
+  font-size: 1em;
   color: var(--text);
   letter-spacing: 1px;
+  line-height: 1.1;
 }
-
-.btn-store-lg .btn-store-name { font-size: 24px; }
 
 /* ── XP BADGE ──────────────────────────────────────────────── */
 .xp-badge {
@@ -1284,6 +1467,73 @@ h1, h2, h3, h4, h5, h6 {
   .guide-grid { grid-template-columns: 1fr; }
 }
 
+/* ── RESEARCH CARDS ────────────────────────────────────────── */
+.research-grid {
+  margin-top: var(--gap-lg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-lg);
+}
+
+.research-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  background: var(--card-dark);
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow-card);
+  padding: var(--gap-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.research-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+
+.research-tag {
+  font-family: var(--font-vt323);
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.research-card-title {
+  font-family: var(--font-jersey);
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  color: var(--text);
+}
+
+.research-meta {
+  font-family: var(--font-inter);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.research-note {
+  font-family: var(--font-vt323);
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  color: var(--muted-dark);
+}
+
+.research-cta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 760px) {
+  .research-grid { grid-template-columns: 1fr; }
+}
+
 /* ── SCREENSHOT GALLERY ────────────────────────────────────── */
 .ss-groups {
   display: flex;
@@ -1575,7 +1825,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   display: flex;
   align-items: center;
+  gap: 6px;
 }
+
+.android-waitlist-label .btn-store-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.android-soon { color: var(--accent); }
 
 .android-waitlist-form {
   display: flex;

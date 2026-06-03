@@ -2,14 +2,19 @@
    COMPONENTS — Buttons, cards, badges, tabs, carousel
    ============================================================ */
 
-/* ── BUTTONS (base) ────────────────────────────────────────── */
+/* ── BUTTONS — unified system ───────────────────────────────── *
+   One .btn base + explicit size modifiers (--xs…--xl) and intent
+   modifiers (--primary/--store/--ghost/--waitlist/--icon-only).
+   Sizes come from tokens.css. No per-instance inline overrides. */
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 20px;
+  /* default size = md */
+  padding: var(--btn-pad-md);
+  font-size: var(--btn-font-md);
   font-family: var(--font-jersey);
-  font-size: 18px;
   letter-spacing: 1px;
   border: 2px solid var(--border);
   box-shadow: var(--shadow-btn);
@@ -30,62 +35,71 @@
   box-shadow: none;
 }
 
-.btn-primary {
+/* ── Size scale (one source of truth) ──────────────────────── */
+.btn--xs { padding: var(--btn-pad-xs); font-size: var(--btn-font-xs); }
+.btn--sm { padding: var(--btn-pad-sm); font-size: var(--btn-font-sm); }
+.btn--md { padding: var(--btn-pad-md); font-size: var(--btn-font-md); }
+.btn--lg { padding: var(--btn-pad-lg); font-size: var(--btn-font-lg); }
+.btn--xl { padding: var(--btn-pad-xl); font-size: var(--btn-font-xl); }
+
+/* ── Intent: PRIMARY (web app — accent filled) ─────────────── */
+.btn--primary {
   background: var(--accent);
   color: var(--border);
+  border-color: var(--accent);
+  font-weight: 700;
 }
 
-.btn-ghost {
+/* ── Intent: GHOST (outlined secondary) ────────────────────── */
+.btn--ghost {
   background: transparent;
   color: var(--text);
   border-color: var(--border-light);
 }
 
-.btn-ghost:hover {
+.btn--ghost:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.btn-lg {
-  padding: 12px 24px;
-  font-size: 20px;
+/* ── Intent: WAITLIST (dashed border — Android) ────────────── */
+.btn--waitlist {
+  background: transparent;
+  color: var(--text);
+  border-style: dashed;
+  border-color: var(--border-light);
 }
 
-/* ── STORE BUTTONS ─────────────────────────────────────────── */
-.btn-store {
-  display: inline-flex;
-  align-items: center;
+.btn--waitlist:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Intent: ICON-ONLY (square) ────────────────────────────── */
+.btn--icon-only {
+  padding: 10px;
+  aspect-ratio: 1;
+}
+
+/* ── Intent: STORE (dark wood + stacked label) ─────────────── */
+.btn--store {
   gap: 12px;
-  padding: 10px 20px;
   background: var(--card-dark);
-  border: 2px solid var(--border);
-  box-shadow: var(--shadow-btn);
-  cursor: pointer;
-  transition: transform 0.12s, box-shadow 0.12s;
-  text-decoration: none;
-}
-
-.btn-store:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 var(--border);
-}
-
-.btn-store-lg {
-  padding: 14px 24px;
-  gap: 14px;
+  color: var(--text);
 }
 
 .btn-store-icon {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
   color: var(--text);
   fill: var(--text);
 }
 
-.btn-store-lg .btn-store-icon {
-  width: 34px;
-  height: 34px;
+.btn--lg .btn-store-icon,
+.btn--xl .btn-store-icon {
+  width: 32px;
+  height: 32px;
 }
 
 .btn-store-text {
@@ -101,16 +115,16 @@
   letter-spacing: 0.1em;
   font-family: var(--font-inter);
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .btn-store-name {
   font-family: var(--font-jersey);
-  font-size: 20px;
+  font-size: 1em;
   color: var(--text);
   letter-spacing: 1px;
+  line-height: 1.1;
 }
-
-.btn-store-lg .btn-store-name { font-size: 24px; }
 
 /* ── XP BADGE ──────────────────────────────────────────────── */
 .xp-badge {
@@ -481,6 +495,73 @@
   .guide-grid { grid-template-columns: 1fr; }
 }
 
+/* ── RESEARCH CARDS ────────────────────────────────────────── */
+.research-grid {
+  margin-top: var(--gap-lg);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-lg);
+}
+
+.research-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  background: var(--card-dark);
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow-card);
+  padding: var(--gap-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.research-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+
+.research-tag {
+  font-family: var(--font-vt323);
+  font-size: 14px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.research-card-title {
+  font-family: var(--font-jersey);
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  color: var(--text);
+}
+
+.research-meta {
+  font-family: var(--font-inter);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.research-note {
+  font-family: var(--font-vt323);
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  color: var(--muted-dark);
+}
+
+.research-cta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 760px) {
+  .research-grid { grid-template-columns: 1fr; }
+}
+
 /* ── SCREENSHOT GALLERY ────────────────────────────────────── */
 .ss-groups {
   display: flex;
@@ -772,7 +853,15 @@
   margin: 0;
   display: flex;
   align-items: center;
+  gap: 6px;
 }
+
+.android-waitlist-label .btn-store-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.android-soon { color: var(--accent); }
 
 .android-waitlist-form {
   display: flex;

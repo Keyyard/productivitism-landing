@@ -49,6 +49,13 @@
   --font-vt323:      'VT323', 'Courier New', monospace;
   --font-inter:      'Inter', system-ui, -apple-system, sans-serif;
 
+  /* ── Button size scale (single source of truth) ─────────────── */
+  --btn-pad-xs:  6px 12px;   --btn-font-xs: 14px;
+  --btn-pad-sm:  8px 16px;   --btn-font-sm: 16px;
+  --btn-pad-md:  10px 20px;  --btn-font-md: 18px;
+  --btn-pad-lg:  12px 24px;  --btn-font-lg: 20px;
+  --btn-pad-xl:  14px 28px;  --btn-font-xl: 22px;
+
   /* ── Spacing ─────────────────────────────────────────────── */
   --gap-xs:   4px;
   --gap-sm:   8px;
