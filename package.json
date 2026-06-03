@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "dev": "npx serve",
+    "dev": "npx serve public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "wrangler deploy",
     "preview": "wrangler dev"

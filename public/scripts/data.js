@@ -10,6 +10,7 @@ const DATA = {
     body: "Productivitism is a gamified habit tracker life RPG built for focus, routines, and ADHD brains that juggle too many goals at once. If you want to code, work out, read, and build something meaningful without burnout, you can turn each life role into a character and make progress one quest at a time.",
     bodyAccent: "Welcome to the cozy life RPG app that helps you gamify your routine without guilt, punishment mechanics, or streak anxiety.",
     ctaLead: "Begin Your Quest →",
+    learnMore: "Learn more →",
     webAppUrl: "https://app.productivitism.com",
     appStoreUrl: "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
     googlePlayUrl: "#download",
@@ -130,11 +131,19 @@ const DATA = {
       }
     ]
   },
+  research: {
+    label: "Backed by research",
+    title: "BUILT ON ACADEMIC WORK",
+    subtitle: "Productivitism's pixel aesthetic and no-punishment loops aren't a gimmick — they come from published research on behavioral psychology and cognitive load."
+  },
   download: {
     label: "Start Today",
     title: "BEGIN YOUR QUEST",
     subtitle: "Free during Early Access. No credit card required.",
     tagline: "Free during Early Access",
+    webAppUrl: "https://app.productivitism.com",
+    webAppNote: "No install. Runs right in your browser.",
+    divider: "or get the app",
     appStoreUrl: "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
     googlePlayUrl: "#download",
     appStoreText: "Download on the",

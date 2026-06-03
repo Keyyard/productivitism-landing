@@ -1,15 +1,24 @@
 <section class="section section--darker" id="download" aria-labelledby="download-title">
   <div class="container">
     <div class="download-inner reveal">
-      <span class="section-label" style="text-align:center;display:block;" data-text="download.label">Start Today</span>
-      <h2 class="section-title" id="download-title" style="text-align:center;" data-text="download.title">BEGIN YOUR QUEST</h2>
-      <p class="section-sub" style="text-align:center;margin:0 auto var(--gap-lg);" data-text="download.subtitle">
+      <span class="section-label" data-text="download.label">Start Today</span>
+      <h2 class="section-title" id="download-title" data-text="download.title">BEGIN YOUR QUEST</h2>
+      <p class="section-sub" data-text="download.subtitle">
         Free during Early Access. No credit card required.
       </p>
 
+      <div class="download-webapp">
+        <a href="https://app.productivitism.com" class="btn btn--primary btn--xl" aria-label="Open the web app — no install needed" data-href="download.webAppUrl">
+          Open Web App →
+        </a>
+        <span class="download-webapp-note" data-text="download.webAppNote">No install. Runs right in your browser.</span>
+      </div>
+
+      <p class="download-divider" data-text="download.divider">or get the app</p>
+
       <div class="download-badges">
 
-        <a href="https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990" class="btn btn-store btn-store-lg" aria-label="Download on the App Store" data-href="download.appStoreUrl">
+        <a href="https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990" class="btn btn--store btn--lg" aria-label="Download on the App Store" data-href="download.appStoreUrl">
           <img src="assets/icons/apple.png" alt="Apple App Store icon" class="btn-store-icon" />
           <span class="btn-store-text">
             <span class="btn-store-sub" data-text="download.appStoreText">Download on the</span>
@@ -19,8 +28,8 @@
 
         <div class="android-waitlist" role="form" aria-label="Android waitlist">
           <p class="android-waitlist-label">
-            <img src="assets/icons/google.png" alt="Google Play icon" class="btn-store-icon" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;" />
-            Android — <span style="color:var(--accent);">Coming Soon</span>
+            <img src="assets/icons/google.png" alt="Google Play icon" class="btn-store-icon" />
+            Android — <span class="android-soon">Coming Soon</span>
           </p>
           <form class="android-waitlist-form" id="android-waitlist-form" onsubmit="handleAndroidWaitlist(event)">
             <input

@@ -16,57 +16,71 @@
     </div>
   </div>
 
-  <div class="hero-content">
-    <!-- Credibility badge -->
-    <div class="hero-credibility" role="note" aria-label="By Keyyard, maker of Cut the Rope × Minecraft DLC">
-      <span class="credibility-star" aria-hidden="true">★</span>
-      <span class="credibility-text">From the maker of <strong>Cut the Rope × Minecraft DLC</strong></span>
-      <span class="credibility-divider" aria-hidden="true">·</span>
-      <span class="credibility-author">Keyyard</span>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <!-- Credibility row -->
+      <div class="hero-credibility" role="note" aria-label="Made by Keyyard, maker of Cut the Rope × Minecraft DLC, with published research">
+        <span class="credibility-star" aria-hidden="true">★</span>
+        <span class="credibility-text">From the maker of <strong>Cut the Rope × Minecraft DLC</strong></span>
+        <span class="credibility-divider" aria-hidden="true">·</span>
+        <a class="credibility-research" href="#research">Published research <span class="credibility-research-long">: ISCEED 2026 + NEU FIT</span></a>
+      </div>
+
+      <span class="hero-eyebrow" data-text="hero.eyebrow">▶ EARLY ACCESS — FREE</span>
+      <h1 class="hero-title">Productivi<wbr>tism — Gamified Habit Tracker</h1>
+      <p class="hero-sub" data-text="hero.subtitle">Life-maxxing for multitalented individuals.</p>
+      <p class="hero-body" data-text="hero.body">
+        Are you a jack-of-all-trades suffering from a constant identity crisis? You want to code, work out, read, and build a business—but your brain gets overwhelmed, and you end up doing nothing at all.
+      </p>
+      <p class="hero-body hero-body--accent" data-text="hero.bodyAccent">
+        Welcome to Productivitism — the ultimate life-maxxing tool that turns your real-life goals into a cozy, 16-bit RPG.
+      </p>
+
+      <div class="hero-cta">
+        <a href="https://app.productivitism.com" class="btn btn--primary btn--xl" aria-label="Open the web app — no install needed" data-href="hero.webAppUrl">
+          Open Web App →
+        </a>
+
+        <a href="https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990" class="btn btn--store btn--lg" aria-label="Download on the App Store" data-href="hero.appStoreUrl">
+          <img src="assets/icons/apple.png" alt="Apple App Store icon" class="btn-store-icon" />
+          <span class="btn-store-text">
+            <span class="btn-store-sub" data-text="download.appStoreText">Download on the</span>
+            <span class="btn-store-name">App Store</span>
+          </span>
+        </a>
+
+        <a href="#download" class="btn btn--waitlist btn--md" aria-label="Get notified when Android launches">
+          <img src="assets/icons/google.png" alt="Google Play icon" class="btn-store-icon" />
+          Notify me on Android
+        </a>
+      </div>
+
+      <a href="#features" class="hero-learn-more" data-text="hero.learnMore">Learn more →</a>
     </div>
 
-    <span class="hero-eyebrow" data-text="hero.eyebrow">▶ EARLY ACCESS — FREE</span>
-    <h1 class="hero-title">Productivi<wbr>tism — Gamified Habit Tracker</h1>
-    <p class="hero-sub" data-text="hero.subtitle">Life-maxxing for multitalented individuals.</p>
-    <p class="hero-body" data-text="hero.body">
-      Are you a jack-of-all-trades suffering from a constant identity crisis? You want to code, work out, read, and build a business—but your brain gets overwhelmed, and you end up doing nothing at all.
-    </p>
-    <p class="hero-body hero-body--accent" data-text="hero.bodyAccent">
-      Welcome to Productivitism — the ultimate life-maxxing tool that turns your real-life goals into a cozy, 16-bit RPG.
-    </p>
-    <div class="hero-cta">
-      <a href="https://app.productivitism.com" class="btn btn-primary" aria-label="Open Web Version" data-href="hero.webAppUrl" style="padding:10px 16px;">
-        Web Version (Live)
-      </a>
-
-      <a href="https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990" class="btn btn-store" aria-label="Download on the App Store" data-href="hero.appStoreUrl">
-        <img src="assets/icons/apple.png" alt="Apple App Store icon" class="btn-store-icon" />
-        <span class="btn-store-text">
-          <span class="btn-store-sub" data-text="download.appStoreText">Download on the</span>
-          <span class="btn-store-name">App Store</span>
-        </span>
-      </a>
-
-      <a href="#download" class="btn btn-ghost" aria-label="Join Android waitlist" style="font-size:14px;padding:10px 16px;">
-        <img src="assets/icons/google.png" alt="Google Play icon" class="btn-store-icon" style="width:20px;height:20px;" />
-        Android
-      </a>
-
-      <a href="#features" class="btn btn-ghost btn-lg" data-text="hero.ctaLead">
-        Learn More →
-      </a>
-    </div>
-  </div>
-
-  <!-- Floating pixel character (desktop) -->
-  <div class="hero-sprite float" aria-hidden="true" data-sprite="hero.sprite">
-    <div class="sprite-stack">
-      <img src="assets/sprites/base/base.png"       alt="Pixel RPG character base in the Productivitism gamified productivity app" data-img="hero.sprite.base" />
-      <img src="assets/sprites/skin/skin_tone.png"  alt="Pixel RPG character skin customization for habit tracker roles" data-img="hero.sprite.skin" />
-      <img src="assets/sprites/hair/hair.png"        alt="Pixel RPG character hair option for life role avatar creation" data-img="hero.sprite.hair" />
-      <img src="assets/sprites/tops/tops.png"        alt="Pixel RPG character outfit top for gamify your life app" data-img="hero.sprite.tops" />
-      <img src="assets/sprites/bottoms/bottoms.png" alt="Pixel RPG character outfit bottom for productivity character builder" data-img="hero.sprite.bottoms" />
-      <img src="assets/sprites/shoes/shoes.png"     alt="Pixel RPG character shoes for habit tracker RPG customization" data-img="hero.sprite.shoes" />
+    <!-- Live web app preview (desktop) — browser-chrome mockup over the live app -->
+    <div class="hero-preview" role="img" aria-label="Live preview of the Productivitism web app">
+      <div class="browser-frame">
+        <div class="browser-chrome" aria-hidden="true">
+          <span class="browser-dot browser-dot--red"></span>
+          <span class="browser-dot browser-dot--amber"></span>
+          <span class="browser-dot browser-dot--green"></span>
+          <span class="browser-url">app.productivitism.com</span>
+        </div>
+        <div class="browser-viewport">
+          <iframe
+            src="https://app.productivitism.com"
+            title="Live preview of the Productivitism web app"
+            loading="lazy"
+            tabindex="-1"
+            aria-hidden="true"
+            referrerpolicy="no-referrer"
+          ></iframe>
+          <a href="https://app.productivitism.com" class="browser-overlay" aria-label="Open the live web app">
+            <span class="browser-overlay-label">Try it live →</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
