@@ -134,7 +134,7 @@ const DATA = {
   research: {
     label: "Backed by research",
     title: "BUILT ON ACADEMIC WORK",
-    subtitle: "Productivitism's pixel aesthetic and no-punishment loops aren't a gimmick — they come from published research on behavioral psychology and cognitive load."
+    subtitle: "Productivitism's pixel aesthetic and no-punishment loops aren't a gimmick. they come from published research on behavioral psychology and cognitive load."
   },
   download: {
     label: "Start Today",
