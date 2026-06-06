@@ -1,5 +1,5 @@
 /* ============================================================
-   LAYOUT — Wrappers, sections, grid
+   LAYOUT - Wrappers, sections, grid
    ============================================================ */
 
 .container {
@@ -506,7 +506,7 @@
   margin-bottom: var(--gap-lg);
 }
 
-/* Primary web-app callout — install-free path comes first */
+/* Primary web-app callout - install-free path comes first */
 .download-webapp {
   display: flex;
   flex-direction: column;

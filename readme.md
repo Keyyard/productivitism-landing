@@ -1,7 +1,7 @@
 # Productivitism: Life RPG
 ### Pixel RPG for Habits & Focus
 
-> Turn your real-life goals into pixel-art characters. Build habits, crush quests, and focus deeper — all in one cozy 16-bit RPG. Your party is waiting.
+> Turn your real-life goals into pixel-art characters. Build habits, crush quests, and focus deeper - all in one cozy 16-bit RPG. Your party is waiting.
 
 [![Download on the App Store](https://img.shields.io/badge/App%20Store-Download-blue?logo=apple)](https://apps.apple.com/vn/app/productivitism-life-rpg/id6761625990)
 [![Website](https://img.shields.io/badge/Website-productivitism.com-green)](https://productivitism.com)
@@ -14,9 +14,9 @@
 
 Are you a jack-of-all-trades who can never pick just one thing to work on?
 
-You want to code, build a business, get fit, and read — but your brain gets overwhelmed, and you end up doing nothing at all. That's not laziness. That's what happens when all your identities are fighting for the same slot.
+You want to code, build a business, get fit, and read - but your brain gets overwhelmed, and you end up doing nothing at all. That's not laziness. That's what happens when all your identities are fighting for the same slot.
 
-**Productivitism** fixes that. It's a cozy, 16-bit RPG that turns your real-life roles into separate pixel-art characters — so you can finally stop the mental tug-of-war and just play.
+**Productivitism** fixes that. It's a cozy, 16-bit RPG that turns your real-life roles into separate pixel-art characters - so you can finally stop the mental tug-of-war and just play.
 
 ---
 
@@ -32,7 +32,7 @@ Assign daily tasks and habits to each character. Check off your retro quest scro
 ADHD brain? Enter the Focus Room. Sit your character down in a pixel-art library, set your timer, and choose ambient sound (Rain, Fireplace, or Interior). Stay in the zone and earn bonus XP for deep, undistracted work.
 
 ### 📊 Track Your Lore
-See which character is putting in the most hours. Review habit grids, focus analytics, and daily streaks to see exactly where your time is going — and who needs more love.
+See which character is putting in the most hours. Review habit grids, focus analytics, and daily streaks to see exactly where your time is going - and who needs more love.
 
 ---
 

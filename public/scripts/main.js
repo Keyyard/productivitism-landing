@@ -1,5 +1,5 @@
 /* ============================================================
-   MAIN.JS — Scroll reveal + nav + screenshot tabs + carousel
+   MAIN.JS - Scroll reveal + nav + screenshot tabs + carousel
    ============================================================ */
 
 (function () {
@@ -79,7 +79,7 @@
   });
 
   /* ── Screenshot gallery groups + thumbnail interaction ─────── */
-  // Delegated thumb click — registered once, works after content loads
+  // Delegated thumb click - registered once, works after content loads
   document.addEventListener('click', (e) => {
     const thumb = e.target.closest('.ss-thumb');
     if (!thumb) return;
@@ -100,7 +100,7 @@
     thumb.classList.add('active');
   });
 
-  // Group tab switching — re-init after content loads (buttons are dynamic)
+  // Group tab switching - re-init after content loads (buttons are dynamic)
   function initGalleryTabs() {
     document.querySelectorAll('.ss-group-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -210,7 +210,7 @@ function handleAndroidWaitlist(e) {
     mode: 'no-cors',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: \`\${ENTRY}=\${encodeURIComponent(email)}\`
-  }).catch(() => {}); // no-cors always throws — submissions still go through
+  }).catch(() => {}); // no-cors always throws - submissions still go through
 
   msg.style.color = 'var(--accent)';
   msg.textContent = "You're on the list. We'll notify you when Android launches.";

@@ -1,5 +1,5 @@
 /* ============================================================
-   LOADER.JS — Fetches HTML section partials and injects them
+   LOADER.JS - Fetches HTML section partials and injects them
    Requires a server (GitHub Pages, Vercel, or `npx serve landing/`)
    ============================================================ */
 
@@ -19,7 +19,7 @@
     } catch (err) {
       console.error(`[loader] Failed to load section "${name}":`, err.message);
       placeholder.innerHTML = `<div style="padding:40px;text-align:center;color:#a89b8c;font-family:monospace">
-        [section: ${name}] — open with a server to preview<br>
+        [section: ${name}] - open with a server to preview<br>
         <small>npx serve . &nbsp;|&nbsp; python3 -m http.server 8000</small>
       </div>`;
     }

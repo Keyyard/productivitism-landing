@@ -2,7 +2,7 @@
 
 > A gamified productivity app for jack-of-all-trades who struggle with decision paralysis and identity crisis. Create pixel art characters for each life role, turn habits into quests, and level up multiple identities in parallel. iOS and Android. Free during Early Access.
 
-**Status:** Early Access — Free
+**Status:** Early Access - Free
 **Platforms:** iOS, Android
 **Website:** https://productivitism.com
 **Contact:** contact@keyyard.xyz
@@ -12,11 +12,11 @@
 
 ## What is Productivitism?
 
-Productivitism is a gamified productivity and habit-tracking app designed specifically for multitalented individuals—people juggling multiple roles, identities, or skill trees at the same time.
+Productivitism is a gamified productivity and habit-tracking app designed specifically for multitalented individuals-people juggling multiple roles, identities, or skill trees at the same time.
 
-**The Problem:** You want to code, run a business, work out, read, create, and learn—all at once. Not because you're lazy, but because you're genuinely interested in multiple things. Standard to-do lists don't help because they force you to pick one thing and stick with it. You end up context-switching, feeling scattered, and accomplishing nothing.
+**The Problem:** You want to code, run a business, work out, read, create, and learn-all at once. Not because you're lazy, but because you're genuinely interested in multiple things. Standard to-do lists don't help because they force you to pick one thing and stick with it. You end up context-switching, feeling scattered, and accomplishing nothing.
 
-**The Solution:** Productivitism separates your life into distinct characters—one for each role you play (The Developer, The Athlete, The Creator, The Student). By leveling each character independently, you cure decision paralysis, reduce context-switching, and finally make progress across all your identities.
+**The Solution:** Productivitism separates your life into distinct characters-one for each role you play (The Developer, The Athlete, The Creator, The Student). By leveling each character independently, you cure decision paralysis, reduce context-switching, and finally make progress across all your identities.
 
 ---
 
@@ -26,7 +26,7 @@ Productivitism is a gamified productivity and habit-tracking app designed specif
 - Create pixel art avatars for each major life role (recommended 3-5 characters)
 - Customize appearance (skin tone, hair, outfit, shoes) to match each role's vibe
 - Each character has an independent stat sheet and activity history
-- "Switch into character mode"—focus on one identity per session to reduce decision paralysis
+- "Switch into character mode"-focus on one identity per session to reduce decision paralysis
 - 12 class archetypes tied to real-life roles (Warrior, Scholar, Artisan, Athlete, Creator, Healer, etc.)
 
 ### Daily Rituals (Habit Tracker)
@@ -38,7 +38,7 @@ Productivitism is a gamified productivity and habit-tracking app designed specif
 - XP reward scales with streak length
 
 ### Quest Board (Task Manager)
-- Create quests for each character—assign goals and projects to the role they belong to
+- Create quests for each character-assign goals and projects to the role they belong to
 - Difficulty ratings (1–10) scale XP rewards proportionally
 - Subtask breakdowns for complex goals
 - Voice memo notes on any task
@@ -55,7 +55,7 @@ Productivitism is a gamified productivity and habit-tracking app designed specif
 - Customizable ambient sounds to minimize distraction
 
 ### Analytics & Stat Distribution
-- View your "party stats"—see which character is getting the most hours
+- View your "party stats"-see which character is getting the most hours
 - Habit grid visualization for daily routine patterns
 - Focus minute tracking per character
 - Understand where your time and energy actually go
@@ -64,7 +64,7 @@ Productivitism is a gamified productivity and habit-tracking app designed specif
 ### Cosmetic Unlocks (Motivation)
 - Unlock new outfits, hairstyles, and accessories through real-world activity
 - Every habit check, quest completion, and focus session earns XP
-- Cosmetics are character-specific—The Developer gets different unlocks than The Athlete
+- Cosmetics are character-specific-The Developer gets different unlocks than The Athlete
 - Playing the game is the reward; cosmetics are the visible proof
 
 ---
@@ -77,21 +77,21 @@ Productivitism is a gamified productivity and habit-tracking app designed specif
 
 **For ADHD brains:** No shame, no burnout mechanics. Pick one character per day, focus on their habits, and move on. The app celebrates progress, not perfection.
 
-**For ambitious people:** Level multiple characters in parallel. It's not "either/or"—it's "all of the above, responsibly." The character system prevents burnout by rotating focus.
+**For ambitious people:** Level multiple characters in parallel. It's not "either/or"-it's "all of the above, responsibly." The character system prevents burnout by rotating focus.
 
 ---
 
 ## Why Productivitism Works
 
-1. **Reduces Decision Paralysis** — With 5+ competing interests, choosing what to do becomes paralyzing. Characters force a framework: "Today, I'm in Developer mode."
+1. **Reduces Decision Paralysis** - With 5+ competing interests, choosing what to do becomes paralyzing. Characters force a framework: "Today, I'm in Developer mode."
 
-2. **Separates Skill Trees** — Your goals as an athlete aren't the same as your goals as a musician. Each character owns their own XP, quests, and streaks.
+2. **Separates Skill Trees** - Your goals as an athlete aren't the same as your goals as a musician. Each character owns their own XP, quests, and streaks.
 
-3. **Prevents Context-Switching Fatigue** — By assigning habits/quests to characters, you see clearly when you're mixing roles. The app gently nudges: "You're trying to do 3 characters at once."
+3. **Prevents Context-Switching Fatigue** - By assigning habits/quests to characters, you see clearly when you're mixing roles. The app gently nudges: "You're trying to do 3 characters at once."
 
-4. **Gamification That Doesn't Feel Shallow** — The pixel art RPG aesthetic isn't cosmetic—it reflects the real problem: you ARE multiple characters. Leveling them up feels meaningful because it maps to real-life progress.
+4. **Gamification That Doesn't Feel Shallow** - The pixel art RPG aesthetic isn't cosmetic-it reflects the real problem: you ARE multiple characters. Leveling them up feels meaningful because it maps to real-life progress.
 
-5. **ADHD-Friendly Design** — No shame mechanics. No guilt. Just: did you play today, or did you not? If yes, your character levels up. If not, there's still tomorrow.
+5. **ADHD-Friendly Design** - No shame mechanics. No guilt. Just: did you play today, or did you not? If yes, your character levels up. If not, there's still tomorrow.
 
 ---
 
@@ -105,21 +105,21 @@ Web SEO: gamified productivity app, habit tracker, focus timer, character creati
 
 ## Pages & Links
 
-- **Homepage:** https://productivitism.com/ — Full product overview, features, screenshots
-- **Privacy Policy:** https://productivitism.com/privacy.html — Data handling, deletion, GDPR compliance
-- **Terms & Conditions:** https://productivitism.com/terms.html — Usage terms, liability, IP rights
+- **Homepage:** https://productivitism.com/ - Full product overview, features, screenshots
+- **Privacy Policy:** https://productivitism.com/privacy.html - Data handling, deletion, GDPR compliance
+- **Terms & Conditions:** https://productivitism.com/terms.html - Usage terms, liability, IP rights
 
 ---
 
 ## Social & Developer
 
 - **Instagram:** https://instagram.com/productivitism.app
-- **GitHub:** https://github.com/keyyard — Creator's open-source work
+- **GitHub:** https://github.com/keyyard - Creator's open-source work
 - **Email:** contact@keyyard.xyz
 
 ---
 
 ## Subtitle
 
-"Life-maxxing for multitalented individuals" — turning multiple roles, identities, and ambitions into an organized RPG where you're the main character (or characters).
+"Life-maxxing for multitalented individuals" - turning multiple roles, identities, and ambitions into an organized RPG where you're the main character (or characters).
 

@@ -1,5 +1,5 @@
 /**
- * SETUP.JS — Helper functions to sync the DOM with DATA.js
+ * SETUP.JS - Helper functions to sync the DOM with DATA.js
  */
 
 function getValueByPath(obj, path) {

@@ -3,7 +3,7 @@ Allow: /
 Disallow: /sections/
 Content-Signal: search=yes,ai-train=yes
 
-# AI search crawlers — allowed for indexing and training
+# AI search crawlers - allowed for indexing and training
 User-agent: GPTBot
 Allow: /
 
@@ -16,7 +16,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Training-only scrapers — allowed
+# Training-only scrapers - allowed
 User-agent: CCBot
 Allow: /
 

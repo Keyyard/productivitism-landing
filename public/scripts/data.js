@@ -1,10 +1,10 @@
 /**
- * DATA.JS — Centralized text and image URLs for the landing page.
+ * DATA.JS - Centralized text and image URLs for the landing page.
  */
 
 const DATA = {
   hero: {
-    eyebrow: "▶ EARLY ACCESS — FREE",
+    eyebrow: "▶ EARLY ACCESS - FREE",
     title: "PRODUCTIVITISM",
     subtitle: "Pixel RPG for Habits & Focus",
     body: "Productivitism is a gamified habit tracker life RPG built for focus, routines, and ADHD brains that juggle too many goals at once. If you want to code, work out, read, and build something meaningful without burnout, you can turn each life role into a character and make progress one quest at a time.",
@@ -26,7 +26,7 @@ const DATA = {
   features: {
     label: "Your real-life party",
     title: "BUILD MULTIPLE IDENTITIES",
-    subtitle: "Stop mixing up your roles. Each character represents a different part of who you are — The Developer, The Athlete, The Creator, The Student. Level them up independently.",
+    subtitle: "Stop mixing up your roles. Each character represents a different part of who you are - The Developer, The Athlete, The Creator, The Student. Level them up independently.",
     items: [
       {
         id: "feat-rituals",
@@ -35,7 +35,7 @@ const DATA = {
         description: "Build streaks on habits tied to each character. Every check-in earns XP and moves your character closer to the next level.",
         details: [
           "Three habit types: Check (binary), Count (reps), Measure (tracked amounts)",
-          "Assign habits to specific characters — separate your skill trees",
+          "Assign habits to specific characters - separate your skill trees",
           "Streak tracking prevents decision paralysis: pick one character per day",
           "Daily, weekly, or custom frequency targets",
           "XP reward scales with streak length"
@@ -97,7 +97,7 @@ const DATA = {
         id: "feat-sync",
         badge: "SYNC",
         title: "SYNC & OFFLINE",
-        description: "Works fully offline. Sign in to sync your data across devices seamlessly — pick up right where you left off.",
+        description: "Works fully offline. Sign in to sync your data across devices seamlessly - pick up right where you left off.",
         details: [
           "Full offline-first functionality",
           "Optional cloud sync via account",
@@ -147,7 +147,7 @@ const DATA = {
     appStoreUrl: "https://apps.apple.com/us/app/productivitism-life-rpg/id6761625990",
     googlePlayUrl: "#download",
     appStoreText: "Download on the",
-    googlePlayText: "Android — Notify Me"
+    googlePlayText: "Android - Notify Me"
   },
   nav: {
     links: [

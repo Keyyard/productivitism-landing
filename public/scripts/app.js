@@ -1,5 +1,5 @@
 /**
- * APP.JS — Section loader + data sync + UI behaviors
+ * APP.JS - Section loader + data sync + UI behaviors
  */
 (function () {
   'use strict';
@@ -332,7 +332,7 @@
           placeholder.innerHTML = await res.text();
         } catch (err) {
           console.error(`[app] Failed to load section "${name}":`, err.message);
-          placeholder.innerHTML = `<div style="padding:40px;text-align:center;color:#a89b8c;font-family:monospace">[section: ${name}] — open with a server to preview<br><small>npx serve . &nbsp;|&nbsp; python3 -m http.server 8000</small></div>`;
+          placeholder.innerHTML = `<div style="padding:40px;text-align:center;color:#a89b8c;font-family:monospace">[section: ${name}] - open with a server to preview<br><small>npx serve . &nbsp;|&nbsp; python3 -m http.server 8000</small></div>`;
         }
       })
     );

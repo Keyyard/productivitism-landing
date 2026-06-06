@@ -1,5 +1,5 @@
 /* ============================================================
-   TOKENS — Design system variables
+   TOKENS - Design system variables
    ============================================================ */
 
 @font-face {
@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
 }
 /* ============================================================
-   LAYOUT — Wrappers, sections, grid
+   LAYOUT - Wrappers, sections, grid
    ============================================================ */
 
 .container {
@@ -648,7 +648,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--gap-lg);
 }
 
-/* Primary web-app callout — install-free path comes first */
+/* Primary web-app callout - install-free path comes first */
 .download-webapp {
   display: flex;
   flex-direction: column;
@@ -971,10 +971,10 @@ h1, h2, h3, h4, h5, h6 {
   .legal-page h1 { font-size: 36px; }
 }
 /* ============================================================
-   COMPONENTS — Buttons, cards, badges, tabs, carousel
+   COMPONENTS - Buttons, cards, badges, tabs, carousel
    ============================================================ */
 
-/* ── BUTTONS — unified system ───────────────────────────────── *
+/* ── BUTTONS - unified system ───────────────────────────────── *
    One .btn base + explicit size modifiers (--xs…--xl) and intent
    modifiers (--primary/--store/--ghost/--waitlist/--icon-only).
    Sizes come from tokens.css. No per-instance inline overrides. */
@@ -1014,7 +1014,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn--lg { padding: var(--btn-pad-lg); font-size: var(--btn-font-lg); }
 .btn--xl { padding: var(--btn-pad-xl); font-size: var(--btn-font-xl); }
 
-/* ── Intent: PRIMARY (web app — accent filled) ─────────────── */
+/* ── Intent: PRIMARY (web app - accent filled) ─────────────── */
 .btn--primary {
   background: var(--accent);
   color: var(--border);
@@ -1034,7 +1034,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent);
 }
 
-/* ── Intent: WAITLIST (dashed border — Android) ────────────── */
+/* ── Intent: WAITLIST (dashed border - Android) ────────────── */
 .btn--waitlist {
   background: transparent;
   color: var(--text);
@@ -1247,7 +1247,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Mobile carousel: full-bleed peekable scroll ───────────── */
 @media (max-width: 760px) {
   .guide-carousel {
-    /* Remove arrow padding — use bleed trick instead */
+    /* Remove arrow padding - use bleed trick instead */
     padding: 0;
     /* Extend to screen edges so the peek reads naturally */
     margin-left: -20px;
@@ -1263,12 +1263,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .guide-carousel-item {
-    /* 76vw = ~296px on 390px — leaves ~74px peek of next card */
+    /* 76vw = ~296px on 390px - leaves ~74px peek of next card */
     width: 76vw;
     max-width: 300px;
   }
 
-  /* Hide arrow buttons — swipe is the interaction on touch */
+  /* Hide arrow buttons - swipe is the interaction on touch */
   .guide-carousel .ss-arrow {
     display: none;
   }
